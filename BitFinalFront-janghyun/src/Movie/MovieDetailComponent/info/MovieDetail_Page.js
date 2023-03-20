@@ -19,12 +19,12 @@ const [commentList,setCommentList]=useState([])
     
 
     useEffect(() => {
-        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_boxoffice')
+        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_boxoffice')
         .then(res => {
             var movieData = res.data
             setItem(movieData.find(item => item.movie_title === movie_title))
         })
-        axios.get(`https://jjh.herokuapp.com/movielist/getComments?title=${movie_title}`)
+        axios.get(`https://jjh.herokuapp.com:8080/movielist/getComments?title=${movie_title}`)
             .then(res => { setCommentList(res.data) })
             .catch(err => console.log(err))
     }, [])

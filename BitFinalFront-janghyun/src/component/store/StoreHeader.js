@@ -10,7 +10,7 @@ const StoreHeader = () => {
     const [drink, setDrink] = useState(false)
     const [snack, setSnack] = useState(false)
     useEffect(() => {
-        axios.get(`https://jjh.herokuapp.com/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
+        axios.get(`https://jjh.herokuapp.com:8080/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
          .then(res => setCount(res.data.length))
          .catch(error => console.log(error))
     }, [])

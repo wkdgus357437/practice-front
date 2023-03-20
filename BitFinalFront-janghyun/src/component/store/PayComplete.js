@@ -23,10 +23,10 @@ const PayComplete = () => {
     
     useEffect(() => {
         
-        axios.get(`https://jjh.herokuapp.com/store/getPay?orderNumber=${params}`)
+        axios.get(`https://jjh.herokuapp.com:8080/store/getPay?orderNumber=${params}`)
              .then(res => setPay(res.data))
              .catch(error => console.log(error))
-        axios.post(`https://jjh.herokuapp.com/store/getUser?username=${sessionStorage.getItem("userName")}`)
+        axios.post(`https://jjh.herokuapp.com:8080/store/getUser?username=${sessionStorage.getItem("userName")}`)
              .then(res => setUser(res.data))
              .catch(error => console.log(error))
              
@@ -61,7 +61,7 @@ const PayComplete = () => {
     }
 
     const sendSMSMessage = () => {
-        axios.post('https://jjh.herokuapp.com/store/sms', null, {params: {
+        axios.post('https://jjh.herokuapp.com:8080/store/sms', null, {params: {
             recipientPhoneNumber : phoneNumber,
             title : subject,
             content : `BITBOX에서 상품 결제가 완료되었습니다. \n주문번호 : ${orderNumber}`

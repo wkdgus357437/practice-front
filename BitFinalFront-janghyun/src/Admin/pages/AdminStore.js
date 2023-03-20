@@ -55,7 +55,7 @@ export default function AdminStore() {
   // 관리자 store 리스트 전품목 가져오기
   useEffect(() => {
     axios
-      .get('https://jjh.herokuapp.com/store/getStoreList')
+      .get('https://jjh.herokuapp.com:8080/store/getStoreList')
       .then((res) => {setAdminStoreList(res.data)})
       .catch((error) => console.log(error))
   }, []);
@@ -80,7 +80,7 @@ const StoreAdmin = adminStoreList.filter(item =>[{
 const adminStoreDel = (storeDel) => {
   const storeSeq = adminStoreList.filter((item)=> item.store_seq !== storeDel)
   setAdminStoreList(storeSeq)
-  axios.delete(`https://jjh.herokuapp.com/store/adminStoreDel?store_seq=${storeDel}`)
+  axios.delete(`https://jjh.herokuapp.com:8080/store/adminStoreDel?store_seq=${storeDel}`)
         .then(()=>{alert('삭제완료')})
         .catch(error => console.log(error))
 }
@@ -106,7 +106,7 @@ const [adminStoreSearchOption, setAdminStoreSearchOption]=useState('subject')
 // 관리자 store 상품 리스트 검색
 const onAdminStoreSearch = (e) => {
   e.preventDefault();
-  axios.get('https://jjh.herokuapp.com/store/adminStoreSearch',{
+  axios.get(':8080store/adminStoreSearch',{
     params:{
       adminStoreSearchKeyword,
       adminStoreSearchOption

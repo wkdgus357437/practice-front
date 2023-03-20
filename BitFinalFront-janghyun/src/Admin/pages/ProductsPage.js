@@ -25,7 +25,7 @@ export default function ProductsPage() {
 
 const [list, setList] = useState([]);
 useEffect(() => {
-    axios.get('https://jjh.herokuapp.com/movielist/admin_movie_list')
+    axios.get('https://jjh.herokuapp.com:8080/movielist/admin_movie_list')
     .then(res => setList(res.data))
     .catch(err => console.log(err))
 },[])
@@ -34,7 +34,7 @@ useEffect(() => {
 const movieDelete = (movieTitle)=> {
   const movieDeleteList = list.filter((item)=> item.movie_title !== movieTitle);
   setList(movieDeleteList);
-  axios.delete(`https://jjh.herokuapp.com/movielist/admin_movie_delete?movie_title=${movieTitle}`)
+  axios.delete(`https://jjh.herokuapp.com:8080/movielist/admin_movie_delete?movie_title=${movieTitle}`)
         .then(()=>{alert('삭제 완료'), window.location.reload()})
         .catch(error => console.log(error))
   
@@ -52,7 +52,7 @@ const movieDelete = (movieTitle)=> {
       alert("검색어를 입력해주세요.");
       return;
     }
-    axios.get('https://jjh.herokuapp.com/movielist/adminMovieSearch',{
+    axios.get('https://jjh.herokuapp.com:8080/movielist/adminMovieSearch',{
       params: {
         adminMovieSearchKeyword,
         adminMovieSearchOption

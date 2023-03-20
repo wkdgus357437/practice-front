@@ -24,7 +24,7 @@ const LoginForm = () => {
   const onLogin = (e) => {
     e.preventDefault()
 
-    axios.post('https://jjh.herokuapp.com/store/login', null, { params: form })
+    axios.post('https://jjh.herokuapp.com:8080/store/login', null, { params: form })
          .then(res => res.data ==='' ? alert('아이디또는 비밀번호가 다릅니다.')
           : 
            sessionStorage.setItem('userName', userName) || alert('스토어 로그인에 성공했어요!') || navigate('/store/'))
@@ -34,7 +34,7 @@ const LoginForm = () => {
   const onLogout = (e) => {
     e.preventDefault()
 
-    axios.post('https://jjh.herokuapp.com/store/login', null, { params: form })
+    axios.post('https://jjh.herokuapp.com:8080/store/login', null, { params: form })
          .then(() => {
           alert('로그아웃 되었어요!');
           sessionStorage.removeItem('userName', userName);

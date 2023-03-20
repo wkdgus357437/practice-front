@@ -42,7 +42,7 @@ const View = () => {
             top: 0,
         })
 
-        axios.get(`https://jjh.herokuapp.com/store/getStore?store_seq=${store_seq}`)
+        axios.get(`https://jjh.herokuapp.com:8080/store/getStore?store_seq=${store_seq}`)
              .then(res => setData(res.data))
              .catch(error => console.log(error))
         }, [])
@@ -68,13 +68,13 @@ const View = () => {
         sessionStorage.getItem("userName") === null ? 
             alert('로그인이 필요합니다.') || navigate('/member/loginForm') :
 
-            axios.get('https://jjh.herokuapp.com/store/isExistCart', {params: {
+            axios.get('https://jjh.herokuapp.com:8080/store/isExistCart', {params: {
                 userName : sessionStorage.getItem("userName"),
                 store_seq : store_seq
             }})
                  .then(res => res.data === 'exist' ? alert('장바구니에 이미 상품이 담겨있습니다.\n 장바구니를 확인해 주세요.') 
                  :
-                 axios.post('https://jjh.herokuapp.com/store/insertCart', null, {params: {
+                 axios.post('https://jjh.herokuapp.com:8080/store/insertCart', null, {params: {
                     count : count,
                     img : img,
                     price : price,
@@ -96,7 +96,7 @@ const View = () => {
     const goToPay = () => {
         sessionStorage.getItem("userName") === null ? 
             alert('로그인이 필요합니다.') || navigate('/member/loginForm') :
-            axios.post('https://jjh.herokuapp.com/store/insertCart', null, {params: {
+            axios.post('https://jjh.herokuapp.com:8080/store/insertCart', null, {params: {
                     count : count,
                     img : img,
                     price : price,

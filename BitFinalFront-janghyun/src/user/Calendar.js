@@ -66,7 +66,7 @@ const Calendar = () => {
         setHidden(true)
         const cinemaName = e.target.id
         setCinemaName(cinemaName)
-        axios.post(`https://jjh.herokuapp.com/book/timeList?movie_date=${dsd}&movie_title=${movieName}&movie_city=${cityName}&movie_cinema=${cinemaName}`)
+        axios.post(`https://jjh.herokuapp.com:8080/book/timeList?movie_date=${dsd}&movie_title=${movieName}&movie_city=${cityName}&movie_cinema=${cinemaName}`)
             .then(res=>setList4(res.data))
             .catch(error => console.log(error))
     }
@@ -85,7 +85,7 @@ const Calendar = () => {
         setHidden(false)
         const cityName = e.target.id
         setCityName(cityName)
-        axios.post(`https://jjh.herokuapp.com/book/cinemaList?movie_date=${dsd}&movie_title=${movieName}&movie_city=${cityName}`)
+        axios.post(`https://jjh.herokuapp.com:8080/book/cinemaList?movie_date=${dsd}&movie_title=${movieName}&movie_city=${cityName}`)
             .then(res=>setList3(res.data))
             .catch(error => console.log(error))
     }
@@ -125,7 +125,7 @@ const Calendar = () => {
         setHidden(false)
         const movieName = e.target.id
         setMovieName(movieName)
-        axios.post(`https://jjh.herokuapp.com/book/cityList?movie_date=${dsd}&movie_title=${movieName}`)
+        axios.post(`https://jjh.herokuapp.com:8080/book/cityList?movie_date=${dsd}&movie_title=${movieName}`)
             .then(res=>setList2(res.data))
             .catch(error => console.log(error))
     }
@@ -147,7 +147,7 @@ const Calendar = () => {
 
     useEffect(()=>{
         setHidden(false)
-        axios.post(`https://jjh.herokuapp.com/book/movieList?movie_date=${dsd}`)
+        axios.post(`https://jjh.herokuapp.com:8080/book/movieList?movie_date=${dsd}`)
             .then(res=>{
 
                 setList(res.data)
@@ -157,7 +157,7 @@ const Calendar = () => {
     },[selectedDate])
 
     useEffect(()=>{
-        axios.post(`https://jjh.herokuapp.com/book/cityList?movie_date=${dsd}&movie_title=${movieName}`)
+        axios.post(`https://jjh.herokuapp.com:8080/book/cityList?movie_date=${dsd}&movie_title=${movieName}`)
             .then(res=>setList2(res.data))
             .catch(error => console.log(error))
 

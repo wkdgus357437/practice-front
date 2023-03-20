@@ -103,7 +103,7 @@ const InfoMember = ({setNum}) => {
     // username 중복체크
     const checkId = () => {
         setIdDiv('');
-        axios.get(`https://jjh.herokuapp.com/member/duplicationChk?username=${username}`)
+        axios.get(`https://jjh.herokuapp.com:8080/member/duplicationChk?username=${username}`)
             .then(res => {
                 setIdDiv(res.data === 'duplicate' ? '중복된 아이디입니다!' : '')
             })
@@ -201,7 +201,7 @@ const InfoMember = ({setNum}) => {
     }
 
     const signUpActionHandler = () => {
-        axios.post('https://jjh.herokuapp.com/auth/signup', null, {params: form})
+        axios.post('https://jjh.herokuapp.com:8080/auth/signup', null, {params: form})
             .then(res => {
                 alert('계정이 등록되었습니다. 감사합니다.');
                 navi("/member/joinForm/finishJoin");

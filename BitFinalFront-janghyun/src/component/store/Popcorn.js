@@ -9,7 +9,7 @@ const StorePopcone = () => {
     const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get(`https://jjh.herokuapp.com/store/getPopcornList?category=${category}`)
+    axios.get(`https://jjh.herokuapp.com:8080/store/getPopcornList?category=${category}`)
          .then(res => setList(res.data))
          .catch(error => console.log(error))
     
@@ -36,13 +36,13 @@ const StorePopcone = () => {
                             sessionStorage.getItem("userName") === null ? 
                             alert('로그인이 필요합니다.') || navigate('/member/loginForm') :
 
-                            axios.get('https://jjh.herokuapp.com/store/isExistCart', {params: {
+                            axios.get('https://jjh.herokuapp.com:8080/store/isExistCart', {params: {
                                 userName : sessionStorage.getItem("userName"),
                                 store_seq : item.store_seq
                             }})
                                 .then(res => res.data === 'exist' ? alert('장바구니에 이미 상품이 담겨있습니다.') 
                                 :
-                                axios.post('https://jjh.herokuapp.com/store/insertCart', null, {params: {
+                                axios.post('https://jjh.herokuapp.com:8080/store/insertCart', null, {params: {
                                     count : 1,
                                     img : item.img,
                                     price : item.price,

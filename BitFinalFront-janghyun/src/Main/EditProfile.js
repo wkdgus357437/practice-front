@@ -115,7 +115,7 @@ const EditProfile = () => {
 
     const onEmailChange = () => {
         console.log(email)
-        axios.get(`https://jjh.herokuapp.com/myPage/emailChange?username=${username}&email=${email}`)
+        axios.get(`https://jjh.herokuapp.com:8080/myPage/emailChange?username=${username}&email=${email}`)
             .then(res => {
                 alert("이메일 변경이 완료되었습니다.");
                 window.location.replace("/myPage");

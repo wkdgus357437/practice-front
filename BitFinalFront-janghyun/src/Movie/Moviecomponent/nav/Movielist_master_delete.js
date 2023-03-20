@@ -12,12 +12,12 @@ const Movielist_master_delete = () => {
     
         const onSearch = () => {
             axios
-                .get(`https://jjh.herokuapp.com/movielist/getMovie?id=${movie_title}`)
+                .get(`https://jjh.herokuapp.com:8080/movielist/getMovie?id=${movie_title}`)
                 .then(res => {
                     res.data === null?
                     setMovie_title('')||setResult('찾는영화가 없습니다.')
                     :
-                    axios.delete(`https://jjh.herokuapp.com/movielist/Movie_delete?id=${movie_title}`)
+                    axios.delete(`https://jjh.herokuapp.com:8080/movielist/Movie_delete?id=${movie_title}`)
                         .then(() => {
                             alert("영화정보를 삭제하였습니다.")
                             setResult('')

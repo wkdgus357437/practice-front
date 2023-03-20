@@ -177,7 +177,7 @@ export default function MovieSearchNInsert() {
                 ];  
 
         // 영화 추가
-         axios.post('https://jjh.herokuapp.com/movielist/write',null,{
+         axios.post('https://jjh.herokuapp.com:8080/movielist/write',null,{
             params:{
               movie_title, movie_subtitle, movie_poster_url, movie_header_url, movie_already_released, movie_release_start,
               movie_release_end,movie_class,movie_agegrade,movie_score,movie_info_title,movie_info_title2,movie_info_type

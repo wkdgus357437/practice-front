@@ -139,7 +139,7 @@ const DetailInfoTab = (props) => {
 
     
     useEffect((e) => {
-        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_boxoffice')
+        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_boxoffice')
             .then(res => {setData(res.data)})
             // 댓글 가져오기
             // axios.get('http://localhost:8080/movielist/get_comment_list')
@@ -374,7 +374,7 @@ const DetailInfoTab = (props) => {
     
     const commentDelete = (e) => {
         if(window.confirm('댓글을 삭제하시겠습니까?')){
-            axios.delete(`https://jjh.herokuapp.com/movielist/user_comment_delete?id=${userName}`)
+            axios.delete(`https://jjh.herokuapp.com:8080/movielist/user_comment_delete?id=${userName}`)
             .then(() => {
                 alert('댓글이 삭제되었습니다.')
                 window.location.reload()
