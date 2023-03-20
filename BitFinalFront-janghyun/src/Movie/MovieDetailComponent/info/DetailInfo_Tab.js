@@ -103,7 +103,8 @@ const DetailInfoTab = (props) => {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`http://localhost:3000/auth/login`,{
+        axios.post(`https://jjh.herokuapp.com:8080/auth/login`,{
+        // axios.post(`http://localhost:3000/auth/login`,{
             username: loginForm.username,
             password: loginForm.password
         }).then(res => {
