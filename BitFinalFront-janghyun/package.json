@@ -71,7 +71,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1"
   },
-  "proxy": "https://jjh.herokuapp.com",
+  "proxy": "https://jjh.herokuapp.com:8080",
   "homepage":".",
   "scripts": {
     "start": "react-scripts start",
