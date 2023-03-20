@@ -1,0 +1,81 @@
+.hour-wrap2{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid #d8d9db;
+    border-bottom: 1px solid #d8d9db;
+}
+
+
+.hour-wrap2-2{
+    width:600px;
+}
+.hour-button {
+    /* Style the buttons */
+    border: none;
+    outline: none;
+    margin: 0 5px;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    font-size: .8667em;
+    font-weight: 600!important;
+
+}
+
+
+.hour-button:hover {
+    /* Style the buttons on hover */
+    border-bottom: 2px solid #503396!important;
+}
+
+.previous,
+.next2 {
+    /* Style the "previous" and "next" buttons */
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.previous:hover,
+.next2:hover {
+    /* Style the "previous" and "next" buttons on hover */
+    background-color: #ddd;
+    color: black;
+}
+
+.hour-button:disabled {
+    /* Style the "previous" button when on the first page */
+    background-color: #ccc;
+    color: red;
+    cursor: default;
+}
+.left2{
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 5px 5px;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 12px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-cld-pre.png);
+}
+
+.right2{
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 5px 5px;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-position: 0 0;
+    width: 7px;
+    height: 12px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-cld-next.png);
+}

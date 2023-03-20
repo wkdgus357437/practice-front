@@ -1,0 +1,136 @@
+#title-bar {
+    border-bottom: 1px solid #eee;
+}
+
+#title-bar > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+#title-bar > div > div img {
+    height: 53px;
+}
+
+#title-bar > div > div > span {
+    font-weight: 300;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: 5px;
+}
+
+#title-bar > div > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+
+}
+
+#title-bar > div > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+#title-bar > div > ul > li > a > img {
+    width: 36px;
+    height: 36px;
+}
+
+#title-bar > div > ul > li > a > span {
+    font-size: 13px;
+    color: #666;
+
+}
+
+#nav-bar {
+    border-bottom: 1px solid #fb4357;
+}
+
+#nav-bar > nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-bar > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+}
+
+#nav-bar > nav > ul > li > a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #222;
+    line-height: 3rem;
+}
+
+#nav-bar > nav > form {
+    display: flex;
+    align-items: center;
+}
+
+#nav-bar > nav > form::before,
+#nav-bar > nav > form::after {
+    content: '';
+    width: 0.5px;
+    height: 20px;
+    background-color: #cacaca;
+}
+
+#nav-bar > nav > form::before {
+    margin-right: 10px;
+}
+
+#nav-bar > nav > form::after {
+    margin-left: 10px;
+}
+
+#nav-bar > nav > form > input {
+    width: 180px;
+    font-size: 16px;
+    color: #222;
+    line-height: 24px;
+    padding: 0 0 0 7px;
+    border: none;
+}
+
+#nav-bar > nav > form > button {
+    line-height: 0;
+}
+
+#nav-bar > nav > form > button > img {
+    width: 26px;
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    height: 60px;
+    background-image: linear-gradient(to right, rgb(215, 67, 87), rgb(241,79,58) 59%, rgb(239, 100, 47));
+    z-index: 10;
+    width: 100%;
+    line-height: 0%;
+}
+.nav-fixed > img{
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+
+.nav_menu {
+    display: inline-flex;
+}
+.nav_menu > li {
+    width: 90px;
+}
+.nav_menu > li > h2 > a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.500em;
+    color: #fff;
+}

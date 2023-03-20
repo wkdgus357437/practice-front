@@ -1,0 +1,670 @@
+.calendar {
+    display: flex;
+    width: 1100px;
+    height: 40px;
+    border-top: 1px solid #555;
+    border-left: 1px solid #d8d9db;
+    border-right: 1px solid #d8d9db;
+
+}
+
+
+.calendar-days{
+    font-size: .8667em;
+    border-bottom: 2px solid transparent;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+
+
+
+}
+.calendar-day{
+    width: 81px;
+    height: 39px;
+    cursor: pointer;
+    letter-spacing: -.5px;
+    font-weight: 600;
+
+}
+
+
+.calendar-days :hover{
+    border-bottom: 2px solid #503396;
+}
+.calendar-header{
+    position: absolute;
+    float: left;
+    border: 1px solid #d8d9db;
+    margin-left: 85px;
+    top:  -10px;
+    height: 20px;
+    line-height: 18px;
+    margin-top: 1px;
+    border-radius: 10px;
+    font-weight: 300;
+    background-color: white;
+    width: 75px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.calendar-day.on {
+    background-color: #f7f8f9;
+    border-bottom: 2px solid #503396;
+}
+.calendar-day.red.on {
+    background-color: #f7f8f9;
+    border-bottom: 2px solid #503396;
+}
+.calendar-day.blue .on {
+    background-color: #f7f8f9;
+    border-bottom: 2px solid #503396;
+}
+
+.calendar-day.blue {
+    color: blue;
+}
+
+.calendar-day.red {
+    color: #ED1C34;
+}
+
+.react-datepicker-wrapper{
+
+    width : 110px !important;
+}
+.react-datepicker__input-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px !important;
+
+}
+
+
+.react-datepicker__input-container input {
+    width: 100px;
+    height: 30px;
+    padding: 5px 10px;
+    background: #f5f5f5;
+    border: 1px solid white;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #2b2b2b;
+}
+
+.react-datepicker__input {
+    width: 100px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.container22 {
+    width: 1125px !important;
+    margin-bottom: 600px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-color: #fff;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    font-size: .8667em;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.box-1 {
+    letter-spacing: -1px;
+    float: left;
+    width: 270px!important;
+    height: 530px;
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid #d8d9db;
+    border-right: 1px solid #d8d9db;
+    border-left: 1px solid #d8d9db;
+    border-bottom:1px solid #d8d9db;
+}
+.box-2 {
+    letter-spacing: -1px;
+    float: left;
+    width: 350px!important;
+    height: 530px;
+    padding: 0 20px 20px 20px;
+    border-right: 1px solid #d8d9db;
+    border-top: 1px solid #d8d9db;
+    border-bottom:1px solid #d8d9db;
+}
+.box-3 {
+    letter-spacing: -1px;
+    float: left;
+    width: 480px !important;
+    height: 530px;
+    border-top: 1px solid #d8d9db;
+    border-right: 1px solid #d8d9db;
+    border-bottom:1px solid #d8d9db;
+
+}
+
+
+
+.container22 button{
+    border: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.ico-movie-time {
+    margin: auto;
+    width: 46px;
+    height: 46px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-movie-time.png);
+
+}
+
+.no-result{
+    height: 100%;
+    padding: 150px 0 0 0;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.5;
+    font-size: 14px;
+
+}
+
+.tit {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 38px;
+    color: #222;
+    font-size: 1.2em;
+    line-height: 38px;
+    font-weight: 800;
+}
+
+.tit3 {
+    overflow: hidden;
+    display: block;
+    margin-left: 20px;
+    width: 100%;
+    height: 38px;
+    color: #222;
+    font-size: 1.2em;
+    line-height: 38px;
+    font-weight: 800;
+}
+
+
+.tit2 {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin: 0;
+    padding-bottom: 50px;
+    color: #222;
+    font-size: 2em;
+    line-height: 38px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.gg-12{
+    background-repeat: no-repeat;
+    padding: 3px 10px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/txt/12_40x40.png) !important;
+    background-size: 20px 20px!important;
+
+}
+.gg-15 {
+    background-repeat: no-repeat;
+    padding: 3px 10px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/txt/15_40x40.png) !important;
+    background-size: 20px 20px !important;
+}
+.gg-18 {
+    background-repeat: no-repeat;
+    padding: 3px 10px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/txt/18_40x40.png) !important;
+    background-size: 20px 20px !important;
+}
+.gg-All{
+    background-repeat: no-repeat;
+    padding: 3px 10px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/txt/ALL_40x40.png) !important;
+    background-size: 20px 20px!important;
+}
+
+.cinema-1{
+    float: left;
+    border-right: 1px solid #d8d9db;
+    width: 50%;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+}
+.cn1{
+    float: left;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-left: 32px;
+    margin-right: 31px;
+    background: url(https://img.megabox.co.kr/static/pc/images/reserve/bg-empty-cell-circle.png) no-repeat center;
+
+}
+.cn1.on{
+    background: #ebebeb;
+
+}
+.cn2{
+    float: left;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-left: 32px;
+    margin-right: 31px;
+    background: url(https://img.megabox.co.kr/static/pc/images/reserve/bg-empty-cell-circle.png) no-repeat center;
+
+}
+
+.cn2.on{
+    background: #ebebeb;
+}
+
+
+.cinema-2{
+
+    width: 50%;
+    height: 300px;
+    overflow-y: auto;
+
+
+
+}
+
+
+
+.result{
+    scroll-behavior: smooth!important;
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.result::-webkit-scrollbar{
+    width: 5px;
+    height: auto;
+}
+.result::-webkit-scrollbar-thumb{
+    background-color: #444;
+}
+
+.result::-webkit-scrollbar-track{
+    background-color: #ebebeb;
+}
+
+
+.movie-btn{
+    display: flex;
+    width: 100%;
+    height: 23px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.movie-btn .on{
+    background-color: #555555 !important;
+    color: #d8d9db!important;
+}
+.legend {
+    display: table-cell;
+    width: 30px;
+    height: 66px;
+    padding: 10px 0 0 0;
+    vertical-align: top;
+}
+.time {
+    display: table-cell;
+    width: 60px;
+    padding: 10px 0;
+    text-align: left;
+    vertical-align: top;
+    font-family: Roboto,Dotum,'돋움',sans-serif!important;
+
+}
+.time strong {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: Roboto,Dotum,'돋움',sans-serif!important;
+}
+.time div {
+    display: block;
+    padding: 3px 0 0 0;
+    font-size: .8667em;
+    font-weight: 500!important;
+    font-family: Roboto,Dotum,'돋움',sans-serif!important;
+}
+.title {
+    display: table-cell;
+    width: 275px;
+    padding: 10px 20px;
+    text-align: left;
+}
+.title strong {
+    display: block;
+    font-weight: 600;
+    padding: 0 5px 0 0;
+    line-height: 1.3;
+}
+
+.title div {
+    display: block;
+    padding-top: 7px;
+    font-size: .8em;
+
+}
+
+.info {
+    display: table-cell;
+    width: 110px;
+    padding: 0 5px 0 0;
+    font-size: .8em;
+    vertical-align: middle;
+    text-align: right;
+}
+.theater {
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    line-height: 1.5;
+}
+.seat {
+    overflow: hidden;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    padding: 0;
+    letter-spacing: 0;
+    text-align: center;
+    border: 1px solid #f2f4f5;
+}
+.now {
+    display: inline-block;
+    color: #01738b;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.all {
+    display: inline-block;
+    color: #666;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.bbtn {
+    overflow: hidden;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #f2f4f5 !important;
+
+}
+
+.mt{
+    margin: 1px 0;
+}
+.mt.selName{
+    color: #fff;
+    font-weight: 400;
+    background-color: #666;
+
+
+}
+
+.mt.selCity{
+    background-color: #f7f8f9!important;
+
+}
+
+
+.left{
+    overflow: hidden;
+    display: inline-block;
+    margin: -1px 0 0 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 12px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-cld-pre.png);
+}
+
+.right{
+    overflow: hidden;
+    display: inline-block;
+    margin: -1px 0 0 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-position: 0 0;
+    width: 7px;
+    height: 12px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-cld-next.png);
+}
+
+.mvposter{
+    margin-top: 20px;
+    height: 130px;
+    border-radius: 5px;
+    border: 1px solid #d8d9db;
+    background-size: 230px 130px!important;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.5;
+    font-size: 14px;
+
+
+}
+.mvposter.aaa{
+    background-image: url(http://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86072/86072_185.JPG);
+    border: 0!important;
+}
+.mvposter.bbb{
+    background-image: url(http://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86676/86676_185.JPG);
+    border: 0!important;
+}
+.mvposter.ccc{
+    background-image: url(http://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83203/83203_185.JPG);
+    border: 0!important;
+}
+.mvposter.ddd{
+    background-image: url(http://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86706/86706_185.JPG);
+    border: 0!important;
+}
+.mvposter.eee{
+     background-image: url(http://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86482/86482_185.JPG);
+     border: 0!important;
+ }
+.mvposter.fff{
+      background-image: url(http://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86720/86720_185.JPG);
+       border: 0!important;
+}
+.mvposter.ggg{
+    background-image: url(http://img.cgv.co.kr/Movie/Thumbnail/Poster/000086/86689/86689_185.JPG);
+    border: 0!important;
+}
+
+
+.titarea{
+    width: 230px!important;
+    height: 250px;
+    overflow-y: auto;
+}
+.titarea::-webkit-scrollbar{
+    width: 5px;
+    height: auto;
+}
+.titarea::-webkit-scrollbar-thumb{
+    background-color: #444;
+}
+
+.titarea::-webkit-scrollbar-track{
+    background-color: #ebebeb;
+}
+
+.posterDel{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    line-height: 0;
+    background: url(https://img.megabox.co.kr/static/pc/images/reserve/btn-choice-dell.png) no-repeat 0 0;
+}
+.posterDel.on{
+    background: none;
+    pointer-events: none;
+}
+.posterWrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cityWrap{
+    position: relative;
+
+
+}
+
+.cityDel{
+    display: block;
+    position: absolute;
+    right: 185px;
+    top: 0;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    font-size: 0;
+    line-height: 0;
+    background: url(https://img.megabox.co.kr/static/pc/images/reserve/btn-choice-dell-circle.png) no-repeat 0 0;
+}
+
+.cityDel.on{
+    background: none;
+    pointer-events: none;
+}
+
+.cinemaWrap{
+    position: relative;
+}
+.cinemaDel{
+    display: block;
+    position: absolute;
+    right: 31px;
+    top: 0;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    font-size: 0;
+    line-height: 0;
+    background: url(https://img.megabox.co.kr/static/pc/images/reserve/btn-choice-dell-circle.png) no-repeat 0 0;
+
+}
+.cinemaDel.on{
+    background: none;
+    pointer-events: none;
+}
+.dateWrap{
+    position: relative;
+}
+
+.container22 a{
+    all : unset;
+    cursor: pointer;
+}
+
+/* Tooltip container */
+
+.tooltip2 {}
+/* Tooltip text */
+.tooltip2 .tooltiptext2 {
+    display: none;
+    width: 120px;
+    height: 160px;
+    border-radius: 14px;
+    border: 3px solid #503396;
+    margin-left: 400px;
+    margin-top: -190px;
+
+
+    /* Position the tooltip text */
+    position: absolute;
+
+
+
+}
+/* Tooltip arrow */
+.tooltip2 .tooltiptext2::after {
+    content: "";
+    position: absolute;
+    top: 102%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #503396 transparent transparent transparent;
+
+
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip2:hover .tooltiptext2 {
+    display: unset;
+
+}
+.preview-box{
+    border-radius: 14px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

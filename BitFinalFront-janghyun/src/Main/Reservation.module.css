@@ -1,0 +1,590 @@
+.containnner {
+    width: 100%;
+}
+.inner_wrappo {
+    overflow: auto;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.inner_wrappo:after, .inner_wrappo:before {
+    content: '';
+    display: table;
+}
+.containnner .has_lnb .hithere {
+    float: right;
+    width: calc(100% - 260px);
+}
+.hithere {
+    width: 800px;
+    margin: 0;
+    padding: 40px 0 0 0;
+}
+.reservations_first h2.tit {
+    padding: 0 0 26px 0;
+    font-size: 1.8666em;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #222;
+    margin-top: 50px;
+}
+.reservations_first h1, .reservations_first h2, .reservations_first h3, .reservations_first h4, .reservations_first h5, .reservations_first h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+.reservations_first {
+    position: relative;
+}
+.reservations_first:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+    height: 1px;
+}
+.reservations_first ul:after, .reservations_first ul:before {
+    content: '';
+    display: table;
+}
+.reservations_first ul:after {
+    clear: both;
+}
+.reservations_first ul:after, .reservations_first ul:before {
+    content: '';
+    display: table;
+}
+.reservations_first ul li.hover:first-child, .reservations_first ul li.on:first-child {
+    border-color: #555;
+}
+.reservations_first ul li.hover, .reservations_first ul li.on {
+    border-color: #555;
+}
+.reservations_first ul li:first-child, .reservations_first ul li:nth-child(6) {
+    /* border-left: 1px solid #d8d9db; */
+}
+.reservations_first ul li {
+    position: relative;
+    float: left;
+    /* width: 20%;
+    border: 1px solid #d8d9db; */
+    border-left: 0;
+}
+.reservations_first ul li.hover .btn, .reservations_first ul li.on .btn {
+    color: #fff;
+    background-color: #555;
+}
+.reservations_first ul li .btn {
+    display: block;
+    width: 100%;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 34px;
+    text-align: center;
+    background-color: transparent;
+    text-decoration: none;
+}
+.reservations_first a:link {
+    color: #444;
+    text-decoration: none;
+}
+.reservations_first a {
+    background-color: transparent;
+}
+.tab_block ul li:last-child {
+    border-right: 1px solid #d8d9db;
+}
+.reservations_first ul li {
+    position: relative;
+    float: left;
+    /* width: 20%;
+    border: 1px solid #d8d9db; */
+    border-left: 0;
+}
+.reservations_first ul:after {
+    clear: both;
+}
+.reservations_first ul:after, .reservations_first ul:before {
+    content: '';
+    display: table;
+}
+.tab_cont_wrap .tab_cont.on {
+    display: block;
+}
+.tab_cont_wrap .tab_cont.on {
+    display: none;
+}
+.tab_cont_wrap .tab_cont {
+    display: none;
+}
+.reservations_first a:visited {
+    color: #666;
+    text-decoration: none;
+    outline: 1px dotted #000;
+}
+.irrr {
+    text-indent: -9999px;
+    position: fixed;
+    top: -9999px;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+.reservations_first a {
+    background-color: transparent;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.board_list_search {
+    padding: 20px 40px;
+    background-color: #f2f4f5;
+}
+.tables {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    empty-cells: show;
+}
+.board_list_search table tbody tr td, .board_list_search table tbody tr th {
+    padding: 2px 0;
+    text-align: left;
+}
+.reservations_first table td, .reservations_first table th {
+    padding: 0;
+}
+.board-list-search [type=checkbox], .board-list-search [type=radio], .board-list-search label {
+    display: inline-block;
+    vertical-align: middle;
+}
+.reservations_first [type=checkbox], .reservations_first [type=radio] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.reservations_first [type=checkbox], .reservations_first [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.reservations_first button, .reservations_first input {
+    overflow: visible;
+}
+.reservations_first button, .reservations_first input, .reservations_first optgroup, .reservations_first select, .reservations_first textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.15;
+}
+.board_list_search table tbody tr td label {
+    margin-right: 20px;
+}
+.board_list_search [type=checkbox], .board_list_search [type=radio], .board_list_search label {
+    display: inline-block;
+    vertical-align: middle;
+}
+.reservations_first label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.reservations_first select[disabled] {
+    background-color: #f7f8f9;
+    color: #afafaf;
+}
+.reservations_first table select {
+    border-radius: 0;
+}
+.reservations_first select {
+    height: 36px;
+    padding-left: 4px;
+    border-color: #ccc;
+    border-radius: 4px;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+.reservations_first button, .reservations_first select {
+    text-transform: none;
+}
+.reservations_first option:checked {
+    background-color: #ecf0f4;
+}
+.reservations_first [type=button], .reservations_first [type=reset], .reservations_first [type=submit], .reservations_first button {
+    -webkit-appearance: button;
+}
+.reservations_first button {
+    cursor: pointer;
+    letter-spacing: -.5px;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+.ml05 {
+    margin-left: 5px!important;
+}
+.reservations_first button, .reservations_first select {
+    text-transform: none;
+}
+.reservations_first button, .reservations_first input {
+    overflow: visible;
+}
+.reservations_first button>i:first-child {
+    margin-left: 0;
+    margin-right: 4px;
+}
+.reservations_first .button>i {
+    margin-top: -2px;
+    margin-left: 4px;
+}
+.no_history_reservation {
+    display: block;
+    height: 160px;
+    padding: 0;
+    text-align: center;
+    line-height: 160px;
+    border: 1px solid #ddd;
+    border-width: 1px 0;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.reservations_first h3.tit {
+    margin: 0;
+    padding: 0 0 16px 0;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: #503396;
+    line-height: 1.1;
+}
+.mt70 {
+    margin-top: 70px!important;
+}
+.reservations_first h1, .reservations_first h2, .reservations_first h3, .reservations_first h4, .reservations_first h5, .reservations_first h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+.dot_list>li {
+    position: relative;
+    padding: 0 0 0 8px;
+}
+.dot_list>li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background-color: #503396;
+    width: 3px;
+    height: 3px;
+}
+.dot_list>li+li {
+    margin-top: 2px;
+}
+.mt10 {
+    margin-top: 10px!important;
+}
+.mt30 {
+    margin-top: 30px!important;
+}
+
+.box_pulldown {
+    overflow: hidden;
+}
+.reservations_first button {
+    cursor: pointer;
+    letter-spacing: -.5px;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+.reservations_first button, .reservations_first select {
+    text-transform: none;
+}
+.reservations_first button, .reservations_first input {
+    overflow: visible;
+}
+.reservations_first button, .reservations_first input, .reservations_first optgroup, .reservations_first select, .reservations_first textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.15;
+}
+.box_pulldown .tit .btn_toggle .iconset {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -4px;
+}
+.ico_arr_toggle_down {
+    overflow: hidden;
+    width: 12px;
+    height: 7px;
+    background-image: url('./img/ico-arr-toggle-down.png');
+}
+.box_pulldown.on .cont {
+    display: block;
+}
+.box_pulldown .cont {
+    /* display: none; */
+    margin: 0;
+    padding: 20px;
+}
+.cont b, .cont strong {
+    font-weight: 700;
+}
+.mb30 {
+    margin-bottom: 30px!important;
+}
+.dot_list>li {
+    position: relative;
+    padding: 0 0 0 8px;
+}
+.reservations_first ol, .reservations_first ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.page_util {
+    display: block;
+    position: static;
+    width: 100%;
+    height: 42px;
+    background-color: #f8f8fa;
+}
+.inner_wrappo {
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.page_util .location {
+    float: left;
+    height: 42px;
+}
+.reservations_first button, .reservations_first select {
+    text-transform: none;
+}
+.reservations_first button, .reservations_first input {
+    overflow: visible;
+}
+.reservations_first button, .reservations_first input, .reservations_first optgroup, .reservations_first select, .reservations_first textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.15;
+}
+.board_list_search table tbody tr td, .board_list_search table tbody tr th {
+    padding: 2px 0;
+    text-align: left;
+}
+.reservations_first table td, .reservations_first table th {
+    padding: 0;
+}
+.bootstrap_select .selectpicker, .bootstrap_select select {
+    height: 100%;
+}
+select.small {
+    height: 32px;
+}
+.bootstrap_select>select {
+    position: absolute!important;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: 0.5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none;
+    z-index: 0!important;
+}
+.bootstrap_select>select.bs_select_hidden, select.bs_select_hidden, select.selectpicker {
+    display: none!important;
+}
+.mr10 {
+    margin-right: 10px!important;
+}
+.board_list_search table tbody tr td, .board_list_search table tbody tr th {
+    padding: 2px 0;
+    text-align: left;
+}
+.board_list_search table tbody tr td .btn_period {
+    display: inline-block;
+}
+.board_list_search table tbody tr td .btn_period button.btn:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.board_list_search table tbody tr td .btn_period button.btn {
+    width: 60px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    color: #666;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-width: 1px 0 1px 1px;
+    background-color: #fff;
+}
+.reservations_first [type=button], .reservations_first [type=reset], .reservations_first [type=submit], .reservations_first button {
+    -webkit-appearance: button;
+}
+.board_list_search table tbody tr td .btn_period button.btn.on {
+    color: #01738b;
+    font-weight: 400;
+}
+.board_list_search table tbody tr td .btn_period button.btn:last-child {
+    border-radius: 0 5px 5px 0;
+    border-right: 1px solid #ccc;
+}
+.board_list_search table tbody tr td .btn_period:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.board_list_search table tbody tr td .date {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 5px;
+}
+.date_calendar.v2 {
+    height: 36px;
+}
+.reservations_first button, .reservations_first input {
+    overflow: visible;
+}
+.reservations_first button, .reservations_first input, .reservations_first optgroup, .reservations_first select, .reservations_first textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.15;
+}
+.date_calendar.v2+.ui_datepicker_trigger {
+    height: 36px;
+}
+.date_calendar.v2 {
+    height: 36px;
+}
+.board_list_search table tbody tr td .date .button {
+    min-width: 0;
+    padding: 0 10px;
+    border-color: #ccc;
+}
+.ico_search_gray {
+    width: 16px;
+    height: 16px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-gray.png);
+}
+.iconset {
+    overflow: hidden;
+    display: inline-block;
+    margin: -1px 0 0 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.mb10 {
+    margin-bottom: 10px!important;
+}
+.board_list_util {
+    margin: 30px 0 0 0;
+    text-align: right;
+}
+.board_list_util:after, .board_list_util:before {
+    content: '';
+    display: table;
+}
+.board_list_util .result_count {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding-top: 15px;
+    line-height: 1.1;
+    vertical-align: top;
+}
+.pt00 {
+    padding-top: 0!important;
+}
+.board_list_util .result_count b {
+    color: #01738b;
+}
+.font_gblue {
+    color: #01738b!important;
+}
+.board_list_util:after {
+    clear: both;
+}
+.board-list_util:after, .board_list_util:before {
+    content: '';
+    display: table;
+}
+.table_wrap {
+    position: relative;
+    border-top: 1px solid #555;
+}
+.pagination {
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+.reservations_first article, .reservations_first aside, .reservations_first figcaption, .reservations_first figure, .reservations_first footer, .reservations_first header, .reservations_first main, .reservations_first nav, .reservations_first section {
+    display: block;
+}
+.box_pulldown {
+    overflow: hidden;
+}
+.box_pulldown .tit {
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #d8d9db;
+}
+.box_pulldown .tit .btn_toggle {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 39px;
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+    text-align: left;
+    background-color: #fff;
+}
+.inner_wrappo:after {
+    clear: both;
+}
+.board_list {
+    line-height: 1.3;
+}
+.board_list>thead>tr>th {
+    height: 45px;
+    padding: 3px 10px;
+    color: #222;
+    border: 1px solid #eaeaea;
+    border-width: 0 0 1px 0;
+    background-color: #f2f4f5;
+}
+.board_list>tbody>tr>td, .board_list>tbody>tr>th {
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-width: 0 0 1px 0;
+    text-align: center;
+}
+.a_c {
+    text-align: center!important;
+}

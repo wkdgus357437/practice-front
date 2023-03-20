@@ -1,0 +1,59 @@
+.movie-wrap {
+    position: relative;
+    height: 498px;
+    background-color: #000;
+    border-top: 2px solid #fb4357;
+}
+.movie-wrap > video{
+    width: 980px;
+    height: 100%;
+    margin : 0 auto;
+    display: flex;
+}
+.movieSelection_video_controller_wrap {
+    display: inline-flex;
+    position: absolute;
+    top: 315px;
+    left: 30px;
+    z-index: 4;
+    /* animation: tt 0.8s 3s ease-in forwards; */
+}
+.movieSelection_video_controller_wrap .btn_movieSelection_detailView {
+    display: block;
+    padding: 5px 30px 5px 18px;
+    font-size: 14px;
+    color: #343434;
+    line-height: 1.429em;
+    background: rgba(255, 255, 255, 0.8) url(./img/arrowR.png) calc(100% - 11px) center/8px 13px scroll no-repeat;
+    border-radius: 15px;
+}
+.movieSelection_video_controller_wrap .btn_movieSelection_playStop {
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/main/ico/pause.png) center/18px scroll no-repeat;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+.movieSelection_video_controller_wrap .btn_movieSelection_play {
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/main/ico/play.png) center/18px scroll no-repeat;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+.movieSelection_video_controller_wrap .btn_movieSelection_soundOnOff {
+    display: block;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background: transparent url(https://img.cgv.co.kr/R2014/images/main/ico/soundOff.png) center/18px scroll no-repeat;
+    border: 1px solid #979797;
+    border-radius: 50%;
+}

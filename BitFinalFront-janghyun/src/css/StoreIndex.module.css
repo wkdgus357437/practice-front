@@ -1,0 +1,223 @@
+.category_product_wrap a {
+    color: inherit;
+    text-decoration: none;
+}
+.category_product_wrap {
+    width: 980px;
+    margin: 0 auto;
+    padding: 90px 0;
+}
+.category_product_list {
+    overflow: hidden;
+}
+.category_product_wrap ol, .category_product_wrap ul {
+    list-style: none!important;
+    padding-left: 0!important;
+}
+.category_product_list > li:first-child {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+}
+.category_product_list > li {
+    float: left;
+    width: 50%;
+    margin-top: 70px;
+    box-sizing: border-box;
+}
+.category_product_list > li:first-child .category_product_title {
+    margin-bottom: 30px;
+    font-family: 'CJONLYONENEW';
+}
+.category_product_list > li .category_product_title {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-family: 'CJONLYONENEW';
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+    line-height: 1em;
+    border-bottom: 1px solid #999;
+}
+.category_product_list > li .category_product_title .btn_category_product {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 23px;
+    height: 23px;
+    font-size: 0;
+}
+.category_product_list > li:first-child .category_product_inner_list li {
+    width: 220px;
+    margin-left: 33px;
+    margin-top: 0;
+}
+.category_product_inner_list li {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.category_product_inner_list {
+    overflow: hidden;
+}
+
+.category_product_list > li:first-child .category_product_inner_list li:first-child {
+    margin-left: 0;
+}
+.category_product_list > li:first-child .category_product_inner_list li .btn_category_product {
+    padding-bottom: 20px;
+}
+.category_product_inner_list li .btn_category_product {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.category_product_list > li:first-child .category_product_inner_list li .btn_category_product .best_product_img_wrap {
+    width: 100%;
+    float: none;
+}
+.category_product_inner_list li .btn_category_product .best_product_img_wrap {
+    display: block;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 160px;
+    z-index: 1;
+}
+.category_product_inner_list li .btn_category_product .best_product_img_wrap img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.category_product_list > li:first-child .category_product_inner_list li .btn_category_product .best_product_text_wrap {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    transform: none;
+}
+.category_product_inner_list li .btn_category_product .best_product_text_wrap {
+    position: absolute;
+    top: 50%;
+    width: 280px;
+    padding-left: 20px;
+    font-family: 'CJONLYONENEW';
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+}
+.category_product_list > li:first-child .category_product_inner_list li .btn_category_product .best_product_text_wrap .best_product_text_title {
+    margin-top: 20px;
+}
+.category_product_inner_list li .btn_category_product .best_product_text_wrap .best_product_text_title {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+}
+.category_product_inner_list li .btn_category_product .best_product_text_wrap .best_product_text_name {
+    display: block;
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #6a6f77;
+}
+.category_product_inner_list li .btn_category_product .best_product_text_wrap .best_product_sale_price_wrap {
+    display: block;
+    margin-top: 20px;
+    font-size: 0;
+    letter-spacing: -0.25px;
+    text-align: left;
+}
+.category_product_inner_list li .btn_category_product .best_product_text_wrap .best_product_sale_price_wrap .store_deatail_source_price {
+    display: inline-block;
+    padding: 0 4px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+}
+.category_product_inner_list li .btn_category_product .best_product_text_wrap .best_product_sale_price_wrap .store_deatail_source_price:after {
+    content: '원';
+}
+.category_product_inner_list li .btn_category_product ~ a {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    /* display: none; */
+}
+.category_product_list > li:nth-child(even) {
+    padding-right: 30px;
+    clear: both;
+}
+.category_product_inner_list li .btn_category_product .best_product_text_wrap .best_product_sale_price_wrap .store_deatail_source_price {
+    display: inline-block;
+    padding: 0 4px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+}
+.category_product_list > li:first-child .category_product_inner_list li:hover .btn_category_product .best_product_img_wrap:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .2;
+    z-index: 3;
+}
+.category_product_list > li:first-child .category_product_inner_list li:hover .btn_category_product ~ a {
+    top: 85px;
+}
+.category_product_list > li:first-child .category_product_inner_list li:hover .btn_category_product_cart {
+    left: 25px;
+}
+.category_product_inner_list li:hover .btn_category_product ~ a {
+    display: block;
+    position: absolute;
+    top: 55px;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+}
+.category_product_inner_list li:hover .btn_category_product_cart {
+    left: 215px;
+    z-index: 3;
+}
+.category_product_inner_list li .btn_category_product ~ a {
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    /* display: none; */
+}
+.category_product_list > li:first-child .category_product_inner_list li:hover .btn_category_product_gift {
+    left: 85px;
+}
+.category_product_inner_list li:hover .btn_category_product_gift {
+    left: 275px;
+    z-index: 3;
+}
+.category_product_list > li:first-child .category_product_inner_list li:hover .btn_category_product_buy {
+    left: 145px;
+}
+.category_product_inner_list li:hover .btn_category_product_buy {
+    left: 335px;
+    z-index: 4;
+}
+.category_product_inner_list li:hover .btn_category_product .best_product_text_wrap:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .85;
+    z-index: 1;
+}

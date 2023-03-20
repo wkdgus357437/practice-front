@@ -1,0 +1,403 @@
+.editProfile_first {
+    overflow: auto;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    width: 800px;
+    min-width: 550px;
+    min-height: 100%;
+    margin: auto;
+}
+.container.has_lnb .editProfile_first {
+    float: right;
+    width: calc(100% - 260px);
+}
+.editProfile_first h2.titub {
+    padding: 0 0 26px 0;
+    font-size: 1.8666em;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #222;
+}
+.editProfile_first h1, .editProfile_first h2, .editProfile_first h3, .editProfile_first h4, .editProfile_first h5, .editProfile_first h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+.editProfile_first ol, .editProfile_first ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.dot_list>li {
+    position: relative;
+    padding: 0 0 0 8px;
+}
+.dot_list>li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background-color: #B20710;
+    width: 3px;
+    height: 3px;
+}
+.editProfile_first table {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    empty-cells: show;
+}
+.editProfile_first table caption {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    opacity: 0;
+}
+.board_form tbody th {
+    background: #f7f8f9;
+}
+.board_form tbody td, .board_form tbody th {
+    position: relative;
+    height: 50px;
+    padding: 7px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5dd;
+}
+
+.editProfile_first table td, .editProfile_first table th {
+    padding: 0;
+}
+.profile_photo {
+    overflow: hidden;
+}
+.board_form tbody th {
+    background: #f7f8f9;
+}
+.board_form tbody td, .board_form tbody th {
+    position: relative;
+    height: 50px;
+    padding: 7px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5dd;
+}
+.mt400 {
+    margin-top: 40px;
+}
+.suntory {
+    margin-bottom: 10px!important;
+}
+.mt400 {
+    margin-top: 40px!important;
+}
+.tit_util:after, .tit_util:before {
+    content: '';
+    display: block;
+}
+.tit_util:after {
+    clear: both;
+}
+.tit_util .titub {
+    float: left;
+    padding: 0!important;
+    line-height: 1.1;
+}
+.editProfile_first h3.titub {
+    margin: 0;
+    padding: 0 0 16px 0;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: #B20710;
+    line-height: 1.1;
+}
+.tit_util .right {
+    float: right;
+}
+.editProfile_first p.reset {
+    padding: 0;
+    margin: 0;
+}
+.font_orange {
+    color: #e63e30!important;
+}
+.editProfile_first em {
+    font-style: normal;
+}
+.mb400 {
+    margin-bottom: 40px!important;
+}
+.table_wrapp {
+    position: relative;
+    border-top: 1px solid #555;
+}
+.buggon .gray_line .small {
+    line-height: 32px;
+}
+
+.buggon .gray_line {
+    color: #444;
+    line-height: 36px;
+    border: 1px solid #c1c1c1;
+    background-color: #fff;
+}
+.buggon .small {
+    height: 32px;
+    padding: 0 12px;
+    line-height: 30px;
+    font-size: .9333em;
+}
+.editProfile_first a.buggon {
+    text-decoration: none;
+}
+.editProfile_first a:link {
+    color: #444;
+    text-decoration: none;
+}
+.editProfile_first .mr10 {
+    margin-right: 10px!important;
+}
+.editProfile_first .ml10 {
+    margin-left: 10px!important;
+}
+.modal_layer {
+    overflow-y: scroll;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 501;
+    background-color: rgba(0,0,0,0);
+}
+
+.editProfile_first article, .editProfile_first aside, .editProfile_first figcaption, .editProfile_first figure, .editProfile_first footer, .editProfile_first header, .editProfile_first main, .editProfile_first nav, .editProfile_first section {
+    display: block;
+}
+.modal_layer .focus {
+    display: block;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    z-index: 502;
+}
+.editProfile_first a:visited {
+    color: #666;
+    text-decoration: none;
+    outline: 1px dotted #000;
+}
+
+.editProfile_first a {
+    background-color: transparent;
+}
+.modal_layer .wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    min-height: 250px;
+    margin: 0;
+    padding: 45px 0 0 0;
+    box-shadow: 2px 2px 6px 2px rgb(0 0 0 / 10%);
+    background: #fff;
+}
+.modal_layer .wrap .layer_header {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #B20710;
+}
+
+.wrap .layer_header {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #503396;
+}
+.modal_layer .wrap .layer_header h3.titub {
+    color: #fff;
+    padding: 15px 20px 0 20px!important;
+    font-size: 1.2em;
+    line-height: 1.1;
+}
+.wrap .layer_header h3.titub {
+    color: #fff;
+    padding: 15px 20px 0 20px;
+    font-size: 1.2em;
+    line-height: 1.1;
+}
+.modal_layer .wrap .layer_con {
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 20px 20px 0 20px;
+}
+
+.wrap .layer_con {
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 20px 20px 0 20px;
+}
+.box_gray.v1 {
+    border-radius: 5px;
+}
+.mt20 {
+    margin-top: 20px!important;
+}
+.a_c {
+    text-align: center!important;
+}
+
+.box_gray {
+    padding: 20px;
+    background-color: #f2f4f5;
+}
+.editProfile_first a:link {
+    color: #444;
+    text-decoration: none;
+}
+.dash_list>li {
+    position: relative;
+    padding: 0 0 0 11px;
+    font-size: .9333em;
+}
+.dash_list>li+li {
+    margin-top: 5px;
+}
+.modal_layer .wrap .btn_modal_close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 16px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-indent: -9999px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/btn/btn-layer-close.png) no-repeat center;
+}
+.board_form tbody th {
+    background: #f7f8f9;
+}
+.font_orange {
+    color: #e63e30!important;
+}
+em {
+    font-style: normal;
+}
+.editProfile_first label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.editProfile_first p.reset {
+    padding: 0;
+    margin: 0;
+}
+.lh32 {
+    line-height: 32px;
+}
+.w170px {
+    width: 170px!important;
+}
+.float_l {
+    float: left!important;
+}
+.change_phone_num_area {
+    display: none;
+    padding: 10px 0 0 0;
+}
+.editProfile_first label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.editProfile_first .input_text {
+    display: inline-block;
+    width: 350px;
+    height: 32px;
+    padding: 0 10px;
+    line-height: 30px;
+    color: #444;
+    border: 1px solid #d8d9db;
+    vertical-align: middle;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    margin-right: 30px;
+
+}
+.editProfile_first .btn_group {
+    padding: 20px 0 30px 0;
+    margin: 0;
+    text-align: center;
+}
+.btn_group:after, .btn_group:before {
+    content: '';
+    display: table;
+}
+.editProfile_first .btn_group .buggon {
+    margin: 0 3px;
+}
+.editProfile_first .buggon .large {
+    height: 46px;
+    padding: 0 30px;
+    line-height: 44px;
+}
+.editProfile_first .buggon {
+    display: inline-block;
+    height: 36px;
+    margin: 0;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 34px;
+    color: #B20710;
+    font-weight: 400;
+    border-radius: 4px;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    text-decoration: none;
+    border: 1px solid #B20710;
+    vertical-align: middle;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.editProfile_first button {
+    cursor: pointer;
+    letter-spacing: -.5px;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+}
+.editProfile_first [type=button], .editProfile_first [type=reset], .editProfile_first [type=submit], .editProfile_first button {
+    -webkit-appearance: button;
+}
+.editProfile_first button, .editProfile_first select {
+    text-transform: none;
+}
+.editProfile_first button, .editProfile_first input {
+    overflow: visible;
+}
+.editProfile_first button, .editProfile_first input, .editProfile_first optgroup, .editProfile_first select, .editProfile_first textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.15;
+}
+.editpwdDiv {
+    color: rgb(178, 7, 16);
+    font-size: 10pt;
+    text-align: left;
+}
