@@ -181,7 +181,7 @@ const InfoMember = ({setNum}) => {
         } = response;
 
         if (success) {
-            axios.get(`http://localhost:3000/member/existName?phoneNumber=${phoneNumber}`)
+            axios.get(`https://jjh.herokuapp.com:8080/member/existName?phoneNumber=${phoneNumber}`)
                 .then(res => {
                     if (res.data === 'exist') {
                         alert("회원가입이 완료되어 있는 인증정보입니다");

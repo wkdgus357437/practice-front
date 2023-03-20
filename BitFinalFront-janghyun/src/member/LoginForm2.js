@@ -50,10 +50,10 @@ const LoginForm2 = () => {
                             email: kakaoAccount.email
                         }
 
-                        axios.get(`http://localhost:3000/member/existName2?username=${kakaoAccount.email}`)
+                        axios.get(`https://jjh.herokuapp.com:8080/member/existName2?username=${kakaoAccount.email}`)
                             .then(res => {
                                 if (res.data === 'exist') {
-                                    axios.post(`http://localhost:3000/auth/login`,{
+                                    axios.post(`https://jjh.herokuapp.com:8080/auth/login`,{
                                         username: aaa.username,
                                         password: aaa.password
                                     }).then(res => {
@@ -88,10 +88,10 @@ const LoginForm2 = () => {
 
                                 } else {
 
-                                    axios.post('http://localhost:3000/auth/signup', null, {params: aaa})
+                                    axios.post('https://jjh.herokuapp.com:8080/auth/signup', null, {params: aaa})
                                         .then(() => {
 
-                                            axios.post(`http://localhost:3000/auth/login`,{
+                                            axios.post(`https://jjh.herokuapp.com:8080/auth/login`,{
                                                 username: aaa.username,
                                                 password: aaa.password
                                             }).then(res => {
@@ -165,7 +165,7 @@ const LoginForm2 = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`http://localhost:3000/auth/login`,{
+        axios.post(`https://jjh.herokuapp.com:8080/auth/login`,{
             username: form.username,
             password: form.password
         }).then(res => {

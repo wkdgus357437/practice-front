@@ -553,8 +553,8 @@ const DetailInfoTab = (props) => {
                                                     </table>
                                                 </form>
                                                 <div style={{ position: 'relative', fontWeight: 400, lineHeight: 5, textAlign:'center', marginTop: 70 }}>
-                                                    <a href="http://localhost:3000/member/FindIdPasswordRoutes" className='loginLink' style={{ padding: 10 }}>&nbsp;ID/PW 찾기</a> | 
-                                                    <a href="http://localhost:3000/member/joinForm" className='loginLink' style={{ padding: 10 }}> 회원가입</a>
+                                                    <a href="https://jjh.herokuapp.com:8080/member/FindIdPasswordRoutes" className='loginLink' style={{ padding: 10 }}>&nbsp;ID/PW 찾기</a> | 
+                                                    <a href="https://jjh.herokuapp.com:8080/member/joinForm" className='loginLink' style={{ padding: 10 }}> 회원가입</a>
                                                 </div>
                                                 <div style={{ position: 'relative', fontWeight: 400, lineHeight: 5, textAlign:'center' }}>
                                                 </div>

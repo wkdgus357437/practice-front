@@ -44,14 +44,14 @@ const PayComplete = () => {
                 description: `상품 결제 내역입니다. \n주문번호 : ${params}`,
                 imageUrl: 'bitbox',
                 link: {
-                    webUrl: `http://localhost:3000/store/`
+                    webUrl: `https://jjh.herokuapp.com:8080/store/`
                 },
             },
             buttons: [
                 {
                     title: '주문내역 확인하기',
                     link: {
-                        webUrl: `http://localhost:3000/store/paycomplete/${params}`
+                        webUrl: `https://jjh.herokuapp.com:8080/store/paycomplete/${params}`
                     },
                 },
             ],
