@@ -57,7 +57,7 @@ const StorePay = () => {
                 listimg = list[i].img
                 liststate = day + dayAfter
     
-                axios.post('https://jjh.herokuapp.com:8080/store/updateCart', null, {params: {
+                axios.post('https://jjh.herokuapp.com/store/updateCart', null, {params: {
                                     cart_seq : listcartseq,
                                     count : listcount,
                                     store_seq : liststoreseq,
@@ -79,7 +79,7 @@ const StorePay = () => {
         }
 
         useEffect(() => {
-            axios.get(`https://jjh.herokuapp.com:8080/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
+            axios.get(`https://jjh.herokuapp.com/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
                     .then(res => {setList(res.data) 
                     || 
                     setDayAfter(res.data[0].cart_seq < 10 ? '00000' + res.data[0].cart_seq : res.data[0].cart_seq < 100 ? '0000' + res.data[0].cart_seq : res.data[0].cart_seq < 1000 ? '000' + res.data[0].cart_seq : res.data[0].cart_seq < 10000 ? '00' + res.data[0].cart_seq : res.data[0].cart_seq < 100000 ? '0' + res.data[0].cart_seq : res.data[0].cart_seq)
@@ -89,7 +89,7 @@ const StorePay = () => {
         }, [])
 
         useEffect(() => {
-            axios.post(`https://jjh.herokuapp.com:8080/store/getUser?username=${sessionStorage.getItem("userName")}`)
+            axios.post(`https://jjh.herokuapp.com/store/getUser?username=${sessionStorage.getItem("userName")}`)
                  .then(res => setUser(res.data))
                  .catch(error => console.log(error))
                 }, [])
@@ -127,7 +127,7 @@ const StorePay = () => {
                     if (res.success) {
                         // 결제 성공 시 로직,
     
-                        axios.post('https://jjh.herokuapp.com:8080/store/insertPay', null, {params: {
+                        axios.post('https://jjh.herokuapp.com/store/insertPay', null, {params: {
                             userName: sessionStorage.getItem("userName"),
                             orderNumber: day + dayAfter,
                             subject: basket,

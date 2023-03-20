@@ -46,7 +46,7 @@ const StorePayment = () => {
                 if (res.success) {
                     // 결제 성공 시 로직,
 
-                    axios.post('https://jjh.herokuapp.com:8080/store/insertPay', null, {params: {
+                    axios.post('https://jjh.herokuapp.com/store/insertPay', null, {params: {
                         userName: sessionStorage.getItem("userName"),
                         orderNumber: day + dayAfter,
                         subject: subject,
@@ -54,7 +54,7 @@ const StorePayment = () => {
                     }}
                     )
                         .then(
-                                axios.post('https://jjh.herokuapp.com:8080/store/updateCart', null, {params: {
+                                axios.post('https://jjh.herokuapp.com/store/updateCart', null, {params: {
                                         subject: subject,
                                         price: price,
                                         subSubject: subSubject,
@@ -99,12 +99,12 @@ const StorePayment = () => {
 
     
     useEffect(() => {
-        axios.get(`https://jjh.herokuapp.com:8080/store/getOne?userName=${sessionStorage.getItem("userName")}&store_seq=${store_seq}`)
+        axios.get(`https://jjh.herokuapp.com/store/getOne?userName=${sessionStorage.getItem("userName")}&store_seq=${store_seq}`)
              .then(res => {setOne(res.data)
              || 
             
              //(업데이트 => state를 moon으로 바꾸고 나머지는 그대로)
-             axios.post('https://jjh.herokuapp.com:8080/store/updateCart', null, {params: {
+             axios.post('https://jjh.herokuapp.com/store/updateCart', null, {params: {
                     subject: res.data.subject,
                     price: res.data.price,
                     subSubject: res.data.subSubject,
@@ -133,7 +133,7 @@ const StorePayment = () => {
     }, [count])
 
     useEffect(() => {
-            axios.post(`https://jjh.herokuapp.com:8080/store/getUser?username=${sessionStorage.getItem("userName")}`)
+            axios.post(`https://jjh.herokuapp.com/store/getUser?username=${sessionStorage.getItem("userName")}`)
                  .then(res => setUser(res.data))
                  .catch(error => console.log(error))
                 }, [])

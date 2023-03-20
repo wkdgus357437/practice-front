@@ -108,7 +108,7 @@ const AdminBoard = () => {
 
     // AdminBoard 리스트 출력
     useEffect(() => {
-        axios.get('https://jjh.herokuapp.com:8080/adminBoard/adminBoardList', {
+        axios.get('https://jjh.herokuapp.com/adminBoard/adminBoardList', {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
@@ -130,7 +130,7 @@ const AdminBoard = () => {
     // AdminBoard 리스트 검색
     const onAdminSearch = (e) => {
         e.preventDefault();
-        axios.get('https://jjh.herokuapp.com:8080/adminBoard/adminBoardSearch', {
+        axios.get('https://jjh.herokuapp.com/adminBoard/adminBoardSearch', {
             params: {
                 adminSearchOption,
                 adminKeyword
@@ -144,7 +144,7 @@ const AdminBoard = () => {
     const onDeleteBoard = (boardSeq) => {
         const boardSeqList = adminList.filter((item) => item.adminBoardSeq !== boardSeq);
         setAdminList(boardSeqList);
-        axios.delete(`https://jjh.herokuapp.com:8080/adminBoard/adminBoardDelete?adminBoardSeq=${boardSeq}`)
+        axios.delete(`https://jjh.herokuapp.com/adminBoard/adminBoardDelete?adminBoardSeq=${boardSeq}`)
             .then(() => {
                 alert('삭제 완로')
             })

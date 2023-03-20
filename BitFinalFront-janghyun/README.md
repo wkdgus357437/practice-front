@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [https://jjh.herokuapp.com:8080](https://jjh.herokuapp.com:8080) to view it in your browser.
+Open [https://jjh.herokuapp.com](https://jjh.herokuapp.com) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.

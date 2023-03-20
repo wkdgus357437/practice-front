@@ -15,7 +15,7 @@ const StoreCart = () => {
     const [drink, setDrink] = useState(false)
     const [snack, setSnack] = useState(false)
     useEffect(() => {
-        axios.get(`https://jjh.herokuapp.com:8080/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
+        axios.get(`https://jjh.herokuapp.com/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
          .then(res => setCount(res.data.length))
          .catch(error => console.log(error))
     }, [])
@@ -70,11 +70,11 @@ const StoreCart = () => {
     })
 
     useEffect(() => {
-    axios.get(`https://jjh.herokuapp.com:8080/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
+    axios.get(`https://jjh.herokuapp.com/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
          .then(res => setList(res.data))
          .catch(error => console.log(error))
     
-         axios.get(`https://jjh.herokuapp.com:8080/store/getCartListCount?userName=${sessionStorage.getItem("userName")}`)
+         axios.get(`https://jjh.herokuapp.com/store/getCartListCount?userName=${sessionStorage.getItem("userName")}`)
          .then(res => setCountList(res.data))
          .catch(error => console.log(error))
          console.log(countList, list)
@@ -83,12 +83,12 @@ const StoreCart = () => {
     const onDelete = (targetSeq) => {
         const newList = list.filter((item) => item.cart_seq !== targetSeq);
         setList(newList);
-        axios.get(`https://jjh.herokuapp.com:8080/store/deleteCart?cart_seq=${targetSeq}`)
+        axios.get(`https://jjh.herokuapp.com/store/deleteCart?cart_seq=${targetSeq}`)
              .then(alert('해당 상품이 삭제되었습니다!'))
              .catch(error => console.log(error))
 
         // 장바구니 삭제 후 카운트와 아다리맞추기
-        axios.get(`https://jjh.herokuapp.com:8080/store/getCartListCount?userName=${sessionStorage.getItem("userName")}`)
+        axios.get(`https://jjh.herokuapp.com/store/getCartListCount?userName=${sessionStorage.getItem("userName")}`)
          .then(res => setCountList(res.data))
          .catch(error => console.log(error))
     }
@@ -113,7 +113,7 @@ const StoreCart = () => {
             listimg = list[i].img
             liststate = list[i].state
 
-            axios.post('https://jjh.herokuapp.com:8080/store/updateCart', null, {params: {
+            axios.post('https://jjh.herokuapp.com/store/updateCart', null, {params: {
                                 cart_seq : listcartseq,
                                 count : listcount,
                                 store_seq : liststoreseq,
@@ -145,7 +145,7 @@ const StoreCart = () => {
     const navigate = useNavigate()
     const nowBuy = (targetSeq) => {
         setOne(list.find((item) => item.cart_seq === targetSeq ? 
-        axios.post('https://jjh.herokuapp.com:8080/store/updateCart', null, {params: {
+        axios.post('https://jjh.herokuapp.com/store/updateCart', null, {params: {
                                 cart_seq : item.cart_seq,
                                 count : item.count,
                                 store_seq : item.store_seq,
@@ -167,7 +167,7 @@ const StoreCart = () => {
     }
 
     useEffect(() => {
-        axios.get(`https://jjh.herokuapp.com:8080/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
+        axios.get(`https://jjh.herokuapp.com/store/getCartList?userName=${sessionStorage.getItem("userName")}`)
          .then(res => setCount(res.data.length))
          .catch(error => console.log(error))
     }, [list])

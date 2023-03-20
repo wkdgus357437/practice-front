@@ -45,7 +45,7 @@ const FindPwdAndChange = () => {
     const {password} = form;
 
     const changePwdActionHandler = () => {
-        axios.post('https://jjh.herokuapp.com:8080/member/findAndChangePassword', null, {params: form})
+        axios.post('https://jjh.herokuapp.com/member/findAndChangePassword', null, {params: form})
             .then(() => {
                 alert('비밀번호가 변경되었습니다. 다시 로그인 해주세요');
                 localStorage.removeItem("accessToken");

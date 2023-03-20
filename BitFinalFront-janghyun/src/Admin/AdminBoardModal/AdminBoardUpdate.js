@@ -30,7 +30,7 @@ const AdminBoardUpdate = (props) => {
 
   // 수정 하기전 데이터 가져오기 
   useEffect(()=>{
-    axios.get(`https://jjh.herokuapp.com:8080/adminBoard/getAdminBoard?adminBoardSeq=${props.props}`)
+    axios.get(`https://jjh.herokuapp.com/adminBoard/getAdminBoard?adminBoardSeq=${props.props}`)
         .then(res=>{
           // setTitle2(res.data.title)
           // setContent2(res.data.content)
@@ -61,7 +61,7 @@ const AdminBoardUpdate = (props) => {
       sw= 0
     }
     if(sw === 1){
-      axios.put( "https://jjh.herokuapp.com:8080/adminBoard/adminBoardUpdate",null,{params:form})
+      axios.put( "https://jjh.herokuapp.com/adminBoard/adminBoardUpdate",null,{params:form})
       .then(()=>{
          alert('수정 완료')
         window.location.reload()

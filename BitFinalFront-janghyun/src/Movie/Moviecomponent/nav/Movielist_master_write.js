@@ -73,7 +73,7 @@ const Movielist_master_write = () => {
 
            // formData.append("movieData", new Blob(JSON.stringify(movieData),{type: "application/json"}))
             console.log("업로드")
-            axios.post('https://jjh.herokuapp.com:8080/movielist/upload',formData, {
+            axios.post('https://jjh.herokuapp.com/movielist/upload',formData, {
                     headers : {
                          'Content-Type':`multipart/form-data`
                     }
@@ -81,7 +81,7 @@ const Movielist_master_write = () => {
                     .then()
                     .catch((error) => console.error(error));
             console.log("영화등록")
-            axios.post('https://jjh.herokuapp.com:8080/movielist/write', null, {params: form})
+            axios.post('https://jjh.herokuapp.com/movielist/write', null, {params: form})
                  .then(() => {
                     alert("영화가 등록되었습니다.");
                     navigate("/master");
@@ -100,7 +100,7 @@ const Movielist_master_write = () => {
 
     const check_movie_title = () => {
         axios
-            .get(`https://jjh.herokuapp.com:8080/movielist/isExistMovie_title?movie_title=${movie_title}`)
+            .get(`https://jjh.herokuapp.com/movielist/isExistMovie_title?movie_title=${movie_title}`)
             //아이디중복검사를 해서 데이터베이스에 없으면 사용가능, 있으면 사용 불가능
             .then(res =>{
                 setMovie_titleDiv(res.data ==='non_exist' ? '사용가능' : '사용 불가능')

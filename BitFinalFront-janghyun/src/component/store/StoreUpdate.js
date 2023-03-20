@@ -39,7 +39,7 @@ import styles from '../../css/writeForm.module.css';
 
   //관리자 store 상품 수정 전 가져오기
   useEffect (()=> {
-    axios.get(`https://jjh.herokuapp.com:8080/store/getAdminStoreList?store_seq=${props.props}`)
+    axios.get(`https://jjh.herokuapp.com/store/getAdminStoreList?store_seq=${props.props}`)
           .then(res => {
             setForm({
               store_seq :res.data.store_seq,
@@ -119,7 +119,7 @@ import styles from '../../css/writeForm.module.css';
         formData.append('img', file)
         console.log(formData)
     
-        axios.post('https://jjh.herokuapp.com:8080/store/imgUpload', formData, {
+        axios.post('https://jjh.herokuapp.com/store/imgUpload', formData, {
           headers : {
             'content-Type' : `multipart/form-data`
           }
@@ -128,7 +128,7 @@ import styles from '../../css/writeForm.module.css';
             .catch(error => console.log(error))
 
         //관리자 stroe 상품 수정
-        axios.put('https://jjh.herokuapp.com:8080/store/storeUpdate', null, { params: form })
+        axios.put('https://jjh.herokuapp.com/store/storeUpdate', null, { params: form })
              .then(() => {
                 alert('스토어에 품목이 수정되었어요!');
                 navigate('/store/');
@@ -139,7 +139,7 @@ import styles from '../../css/writeForm.module.css';
 
   // 관리자 store 중복검사 
   const isExistSubject = () => {
-    axios.get(`https://jjh.herokuapp.com:8080/store/isExistSubject?subject=${subject}`)
+    axios.get(`https://jjh.herokuapp.com/store/isExistSubject?subject=${subject}`)
          .then(res => {
             setSubjectDiv(res.data === 'non_exist' ? '등록 가능' : '등록 불가능')
          })

@@ -38,7 +38,7 @@ const AdminBoardWrite = () => {
       sw= 0
     }
     if(sw === 1){
-      axios.post( "https://jjh.herokuapp.com:8080/adminBoard/adminBoardWrite",null,{params:form})
+      axios.post( "https://jjh.herokuapp.com/adminBoard/adminBoardWrite",null,{params:form})
       .then(()=>{
          alert('작성 완료')
         window.location.reload()

@@ -27,7 +27,7 @@ const Reservation = () => {
     const [viewReservation, setViewReservation] = useState();
 
     const getReservation = () => {
-        axios.get(`https://jjh.herokuapp.com:8080/reservation/getReservation?id=${id}`)
+        axios.get(`https://jjh.herokuapp.com/reservation/getReservation?id=${id}`)
             .then(res => {
                 var array = res.data;
                 var copy = [];
@@ -42,7 +42,7 @@ const Reservation = () => {
     //만료되지 않은 정보만
     const reservationCancel = (targetReservation) => {
         window.confirm &&
-        axios.get(`https://jjh.herokuapp.com:8080/book/getSeat?pk=${targetReservation.book_pk}`)
+        axios.get(`https://jjh.herokuapp.com/book/getSeat?pk=${targetReservation.book_pk}`)
             .then(res => {
                 //pk로 가져온 상영정보
                 var showDTO = res.data;
@@ -63,12 +63,12 @@ const Reservation = () => {
                 })
                 showDTO = {...showDTO, movie_seat: JSON.stringify(copyRoom)}
                 //DB에서 삭제
-                axios.post('https://jjh.herokuapp.com:8080/book/addSeat', showDTO, {
+                axios.post('https://jjh.herokuapp.com/book/addSeat', showDTO, {
                     headers: {
                         'Content-Type': 'application/json'
                     }
                 }).then(res => {
-                    axios.delete(`https://jjh.herokuapp.com:8080/reservation/cancelReservation?pk=${targetReservation.pk}`)
+                    axios.delete(`https://jjh.herokuapp.com/reservation/cancelReservation?pk=${targetReservation.pk}`)
                         .then(res => {
                             alert('예매가 취소되었습니다.')
                             getReservation();
@@ -95,7 +95,7 @@ const Reservation = () => {
 
     // 스토어 구매현황
     useEffect(() => {
-        axios.get(`https://jjh.herokuapp.com:8080/store/myStorePaymentInfo?username=${username}`)
+        axios.get(`https://jjh.herokuapp.com/store/myStorePaymentInfo?username=${username}`)
             .then(res => {
                 setPaymentData(res.data);
             })

@@ -16,12 +16,12 @@ const StillCut_Tab = () => {
     const [trailerPoster, setTrailerPoster] = useState('') // 보여줄 영상 이미지 URL
 
     useEffect(()=> {
-        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_boxoffice')
+        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_boxoffice')
         .then(res => {
             var movieData = res.data
             setThisMovie(movieData.find(item => item.movie_title === movie_title))
         })
-        axios.get(`https://jjh.herokuapp.com:8080/movielist/get_trailer?title=${movie_title}`)
+        axios.get(`https://jjh.herokuapp.com/movielist/get_trailer?title=${movie_title}`)
         .then(res => {
             setTrailerList(res.data)
             // var binData = res.data

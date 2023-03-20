@@ -103,7 +103,7 @@ const DetailInfoTab = (props) => {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`https://jjh.herokuapp.com:8080/auth/login`,{
+        axios.post(`https://jjh.herokuapp.com/auth/login`,{
         // axios.post(`http://localhost:3000/auth/login`,{
             username: loginForm.username,
             password: loginForm.password
@@ -140,7 +140,7 @@ const DetailInfoTab = (props) => {
 
     
     useEffect((e) => {
-        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_boxoffice')
+        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_boxoffice')
             .then(res => {setData(res.data)})
             // 댓글 가져오기
             // axios.get('http://localhost:8080/movielist/get_comment_list')
@@ -339,7 +339,7 @@ const DetailInfoTab = (props) => {
         
         if(sw === 1){
             console.log(reviewForm)
-            axios.post('http://localhost:8080/movielist/user_comment_write', null, { params:reviewForm })
+            axios.post('https://jjh.herokuapp.com/movielist/user_comment_write', null, { params:reviewForm })
             .then(() => {
                 alert('댓글이 작성되었습니다.');
                 window.location.reload()
@@ -375,7 +375,7 @@ const DetailInfoTab = (props) => {
     
     const commentDelete = (e) => {
         if(window.confirm('댓글을 삭제하시겠습니까?')){
-            axios.delete(`https://jjh.herokuapp.com:8080/movielist/user_comment_delete?id=${userName}`)
+            axios.delete(`https://jjh.herokuapp.com/movielist/user_comment_delete?id=${userName}`)
             .then(() => {
                 alert('댓글이 삭제되었습니다.')
                 window.location.reload()
@@ -553,8 +553,8 @@ const DetailInfoTab = (props) => {
                                                     </table>
                                                 </form>
                                                 <div style={{ position: 'relative', fontWeight: 400, lineHeight: 5, textAlign:'center', marginTop: 70 }}>
-                                                    <a href="https://jjh.herokuapp.com:8080/member/FindIdPasswordRoutes" className='loginLink' style={{ padding: 10 }}>&nbsp;ID/PW 찾기</a> | 
-                                                    <a href="https://jjh.herokuapp.com:8080/member/joinForm" className='loginLink' style={{ padding: 10 }}> 회원가입</a>
+                                                    <a href="https://jjh.herokuapp.com/member/FindIdPasswordRoutes" className='loginLink' style={{ padding: 10 }}>&nbsp;ID/PW 찾기</a> | 
+                                                    <a href="https://jjh.herokuapp.com/member/joinForm" className='loginLink' style={{ padding: 10 }}> 회원가입</a>
                                                 </div>
                                                 <div style={{ position: 'relative', fontWeight: 400, lineHeight: 5, textAlign:'center' }}>
                                                 </div>

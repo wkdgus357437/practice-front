@@ -37,7 +37,7 @@ const FindId = () => {
 
 
     const findIdActionHandler = () => {
-        axios.get("https://jjh.herokuapp.com:8080/member/findUsername", {params: form})
+        axios.get("https://jjh.herokuapp.com/member/findUsername", {params: form})
             .then(res => {
                 if (res.data) {
                     alert(name + "님의 아이디는 " + res.data + " 입니다.");

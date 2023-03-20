@@ -81,7 +81,7 @@ const FindPassword = () => {
 
 
     const findPasswordActionHandler = () => {
-        axios.get("https://jjh.herokuapp.com:8080/member/findPassword", {params: form})
+        axios.get("https://jjh.herokuapp.com/member/findPassword", {params: form})
             .then(res => {
                 if (res.data) {
                     onClickCertificate();

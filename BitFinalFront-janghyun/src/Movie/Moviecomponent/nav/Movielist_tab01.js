@@ -38,7 +38,7 @@ const Movielist_tab01 = () => {
         },[already_released, list.movie_like]);
 
     const movie_add_list = () => {
-        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_boxoffice')
+        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_boxoffice')
             .then(res => {setMovie_count(res.data.length)
                 console.log("전체영화리스트 = " + the_number_of_movielist) 
                 setList(res.data.splice(0,the_number_of_movielist))
@@ -47,7 +47,7 @@ const Movielist_tab01 = () => {
     }
 
     const movie_already_release_filter = () => {
-        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_already_on_boxoffice')
+        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_already_on_boxoffice')
             .then(res => {setMovie_count(res.data.length)
                 console.log("개봉중인 영화 리스트 = " + movielist_release_filter) 
                 setList(res.data.splice(0,movielist_release_filter))})
@@ -65,7 +65,7 @@ const Movielist_tab01 = () => {
     // }
 
     const  movie_add_total_list = () => {
-        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_boxoffice')
+        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_boxoffice')
             .then(res => {setMovie_count(res.data.length)
                 setThe_number_of_movielist(the_number_of_movielist + 20);
                 console.log("전체영화리스트 = " + the_number_of_movielist) 
@@ -75,7 +75,7 @@ const Movielist_tab01 = () => {
     }
 
     const movie_add_filter_list = () => {
-        axios.get('https://jjh.herokuapp.com:8080/movielist/getMovieList_already_on_boxoffice')
+        axios.get('https://jjh.herokuapp.com/movielist/getMovieList_already_on_boxoffice')
             .then(res => {setMovie_count(res.data.length)
                 setMovielist_release_filter(movielist_release_filter => movielist_release_filter + 20) 
                 console.log("개봉중인 영화 리스트 = " + movielist_release_filter) 
@@ -102,7 +102,7 @@ const Movielist_tab01 = () => {
 
     const onSearch = () => {
         axios
-            .get('https://jjh.herokuapp.com:8080/movielist/Movie_search_boxoffice', {
+            .get('https://jjh.herokuapp.com/movielist/Movie_search_boxoffice', {
                     params : {
                         searchOption : searchOption,
                         keyword: keyword

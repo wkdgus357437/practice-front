@@ -94,7 +94,7 @@ import { borderBottom } from '@mui/system';
         formData.append('img', file)
         console.log(formData)
     
-        axios.post('https://jjh.herokuapp.com:8080/store/imgUpload', formData, {
+        axios.post('https://jjh.herokuapp.com/store/imgUpload', formData, {
           headers : {
             'content-Type' : `multipart/form-data`
           }
@@ -104,7 +104,7 @@ import { borderBottom } from '@mui/system';
 
         //두번째
         
-        axios.post('https://jjh.herokuapp.com:8080/store/write', null, { params: form })
+        axios.post('https://jjh.herokuapp.com/store/write', null, { params: form })
              .then(() => {
                 alert('스토어에 품목이 등록되었어요!');
                 navigate('/store/');
@@ -116,7 +116,7 @@ import { borderBottom } from '@mui/system';
   const isExistSubject = () => {
     // console.log('seq='+(seq))
     // console.log('subject='+(subject))
-    axios.get(`https://jjh.herokuapp.com:8080/store/isExistSubject?subject=${subject}`)
+    axios.get(`https://jjh.herokuapp.com/store/isExistSubject?subject=${subject}`)
          .then(res => {
             setSubjectDiv(res.data === 'non_exist' ? '등록 가능' : '등록 불가능')
          })
