@@ -154,7 +154,7 @@ const UserPage = () => {
 
   // 유저 리스트 뽑기, 헤더에 토큰담기(토큰 복호화 후 권한체크)
   useEffect(()=>{
-    axios.get('https://jjh.herokuapp.com:/member/getUserList', {
+    axios.get('https://jjh.herokuapp.com/member/getUserList', {
       headers: {
         Authorization: `Bearer ${accessToken}`
       }
