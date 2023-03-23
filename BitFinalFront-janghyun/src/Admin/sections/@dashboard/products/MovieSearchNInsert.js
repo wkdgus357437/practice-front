@@ -46,9 +46,9 @@ export default function MovieSearchNInsert() {
             params:{query: moviecdNum,language: "ko"},
             headers: {
                 // 'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
-                'X-Naver-Client-Id': 'J7ogyfDqL24wfyC0fjCj',
+                'X-Naver-Client-Id': 'yqQoYOiFtfGWO2oUVZKq',
                 // 'X-Naver-Client-Secret': 'SqBOobPA63',
-                'X-Naver-Client-Secret': 'pE144iqRPi',
+                'X-Naver-Client-Secret': 'ZogYdw7PQa',
                 'Accept': '*/*',
                 'Access-Control-Allow-Origin':'*',
                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
