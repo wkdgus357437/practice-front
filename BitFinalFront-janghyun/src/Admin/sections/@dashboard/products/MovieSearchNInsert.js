@@ -52,7 +52,7 @@ export default function MovieSearchNInsert() {
             },
          }).then(res => res.data.items.length === 0 ? alert("데이터 없음")|| setStatus(false)
                                                     : setMovieSearchData(res.data.items)||setStatus(true)
-                )
+                );
 
     }
     useEffect(()=>{
