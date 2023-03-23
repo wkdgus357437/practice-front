@@ -84,7 +84,8 @@ export default function MovieSearchNInsert() {
     useEffect(()=>{
         axios.get(url3,{
             params:{
-                key: '0d28095f9f31dd96948bdf3a57f427d1',
+                // key: '0d28095f9f31dd96948bdf3a57f427d1',
+                key: '218cd2fb84f26322ef3478c3d647564e',
                 movieNm : moviecdNum
             }
         }).then(res => setOtherQuery(res.data.movieListResult.movieList[0].movieCd)
@@ -97,7 +98,8 @@ export default function MovieSearchNInsert() {
         const url4 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
         axios.get(url4,{
             params:{
-                key: '0d28095f9f31dd96948bdf3a57f427d1',
+                // key: '0d28095f9f31dd96948bdf3a57f427d1',
+                key: '218cd2fb84f26322ef3478c3d647564e',
                 movieCd : otherQuery
             }
         }).then(res => setOtherData(res.data.movieInfoResult.movieInfo)
