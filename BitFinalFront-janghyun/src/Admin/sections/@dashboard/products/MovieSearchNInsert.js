@@ -41,19 +41,6 @@ export default function MovieSearchNInsert() {
             return;
           }
 
-        // axios.get(url,{
-        //     params:{query: moviecdNum,language: "ko"},
-        //     headers: {
-        //         'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
-        //         'X-Naver-Client-Secret': 'SqBOobPA63',
-        //         'Accept': '*/*',
-        //         'Access-Control-Allow-Origin':'*',
-        //         'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-        //     },
-        //  }).then(res => res.data.items.length === 0 ? alert("데이터 없음")|| setStatus(false)
-        //                                             : setMovieSearchData(res.data.items)||setStatus(true)
-        //         );
-
         axios.get(url,{
             params:{query: moviecdNum,language: "ko"},
             headers: {
@@ -63,20 +50,10 @@ export default function MovieSearchNInsert() {
                 'Access-Control-Allow-Origin':'*',
                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
             },
-          }).then(res => {
-            console.log(res); // res 객체를 콘솔에 출력해보기
-            if (res.data && res.data.items && res.data.items.length > 0) {
-              setMovieSearchData(res.data.items);
-              setStatus(true);
-            } else {
-              alert("데이터 없음");
-              setStatus(false);
-            }
-          }).catch(error => {
-            console.log(error); // 에러 메시지를 콘솔에 출력해보기
-            alert("오류 발생");
-            setStatus(false);
-          });
+         }).then(res => res.data.items.length === 0 ? alert("데이터 없음")|| setStatus(false)
+                                                    : setMovieSearchData(res.data.items)||setStatus(true)
+                );
+
     }
     useEffect(()=>{
         axios.get(url3,{
