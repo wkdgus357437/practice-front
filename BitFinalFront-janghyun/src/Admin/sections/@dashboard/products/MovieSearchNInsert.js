@@ -32,6 +32,7 @@ export default function MovieSearchNInsert() {
     const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
     // const url3 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
     const url3 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
+    
     //네이버 영화 api
     const onSearch = () =>{
 
@@ -44,8 +45,10 @@ export default function MovieSearchNInsert() {
         axios.get(url,{
             params:{query: moviecdNum,language: "ko"},
             headers: {
-                'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
-                'X-Naver-Client-Secret': 'SqBOobPA63',
+                // 'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
+                'X-Naver-Client-Id': 'J7ogyfDqL24wfyC0fjCj',
+                // 'X-Naver-Client-Secret': 'SqBOobPA63',
+                'X-Naver-Client-Secret': 'pE144iqRPi',
                 'Accept': '*/*',
                 'Access-Control-Allow-Origin':'*',
                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
@@ -54,6 +57,29 @@ export default function MovieSearchNInsert() {
                                                     : setMovieSearchData(res.data.items)||setStatus(true)
                 );
 
+        // axios.get(url,{
+        //     params:{query: moviecdNum,language: "ko"},
+        //     headers: {
+        //         'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
+        //         'X-Naver-Client-Secret': 'SqBOobPA63',
+        //         'Accept': '*/*',
+        //         'Access-Control-Allow-Origin':'*',
+        //         'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+        //     },
+        //   }).then(res => {
+        //     console.log(res); // res 객체를 콘솔에 출력해보기
+        //     if (res.data && res.data.items && res.data.items.length > 0) {
+        //       setMovieSearchData(res.data.items);
+        //       setStatus(true);
+        //     } else {
+        //       alert("데이터 없음");
+        //       setStatus(false);
+        //     }
+        //   }).catch(error => {
+        //     console.log(error); // 에러 메시지를 콘솔에 출력해보기
+        //     alert("오류 발생");
+        //     setStatus(false);
+        //   });
     }
     useEffect(()=>{
         axios.get(url3,{
