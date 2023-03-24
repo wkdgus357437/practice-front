@@ -28,13 +28,27 @@ export default function MovieSearchNInsert() {
     const[otherQuery,setOtherQuery] = useState('')
     const[otherData,setOtherData] = useState([]);
     // const url = '../movieapi/v1/search/movie.json';
-    const url = 'https://openapi.naver.com/v1/search/movie.json';
+    const url = 'https://janghyun-bitbox-project.netlify.app/movieapi/v1/search/movie.json';
+    // const url = 'https://openapi.naver.com/v1/search/movie.json';
     // const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
     const url1 = '../moviesearch/movie?api_key=1f7b1f9e89d450f52301bfae0a2217ef';
     // const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
     const url2 = `../movieapp/${setQuery}?api_key=1f7b1f9e89d450f52301bfae0a2217ef`;
     // const url3 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
     const url3 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
+    
+
+
+    // const apiClient = axios.create({
+    //     baseURL: 'http://localhost:3000/movieapi', // API 서버의 기본 URL
+    //     headers: {
+    //       'X-Naver-Client-Id': 'yqQoYOiFtfGWO2oUVZKq',
+    //       'X-Naver-Client-Secret': 'ZogYdw7PQa',
+    //       'Accept': '*/*',
+    //       'Access-Control-Allow-Origin': '*',
+    //       'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+    //     },
+    //   });
     
     //네이버 영화 api
     const onSearch = () =>{
@@ -44,6 +58,25 @@ export default function MovieSearchNInsert() {
             alert("검색어를 입력해주세요.");
             return;
           }
+// ----------------------------------------------------------
+// apiClient.get('/v1/search/movie.json', {
+//     params: {
+//       query: moviecdNum, // 검색어
+//       display: 10, // 출력할 결과 수 (최대 10개)
+//       // ...
+//     }
+//   })
+//   .then(res => {
+//     if (res.data.items === undefined) {
+//       alert('데이터 없음');
+//       setStatus(false);
+//     } else {
+//       setMovieSearchData(res.data.items);
+//       setStatus(true);
+//     }
+//   });
+
+// --------------------------------------------------------
 
         axios.get(url,{
             params:{query: moviecdNum,language: "ko"},
@@ -52,6 +85,7 @@ export default function MovieSearchNInsert() {
                 // 'X-Naver-Client-Secret': 'SqBOobPA63',
                 'X-Naver-Client-Id': 'yqQoYOiFtfGWO2oUVZKq',
                 'X-Naver-Client-Secret': 'ZogYdw7PQa',
+                
                 'Accept': '*/*',
                 'Access-Control-Allow-Origin':'*',
                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
@@ -60,29 +94,7 @@ export default function MovieSearchNInsert() {
                                                     : setMovieSearchData(res.data.items)||setStatus(true)
                 );
 
-        // axios.get(url,{
-        //     params:{query: moviecdNum,language: "ko"},
-        //     headers: {
-        //         'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
-        //         'X-Naver-Client-Secret': 'SqBOobPA63',
-        //         'Accept': '*/*',
-        //         'Access-Control-Allow-Origin':'*',
-        //         'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-        //     },
-        //   }).then(res => {
-        //     console.log(res); // res 객체를 콘솔에 출력해보기
-        //     if (res.data && res.data.items && res.data.items.length > 0) {
-        //       setMovieSearchData(res.data.items);
-        //       setStatus(true);
-        //     } else {
-        //       alert("데이터 없음");
-        //       setStatus(false);
-        //     }
-        //   }).catch(error => {
-        //     console.log(error); // 에러 메시지를 콘솔에 출력해보기
-        //     alert("오류 발생");
-        //     setStatus(false);
-        //   });
+       
     }
 
     // 영화진흥위원회
