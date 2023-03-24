@@ -28,8 +28,10 @@ export default function MovieSearchNInsert() {
     const[otherQuery,setOtherQuery] = useState('')
     const[otherData,setOtherData] = useState([]);
     const url = '../movieapi/v1/search/movie.json';
-    const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
-    const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
+    // const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
+    const url1 = '../moviesearch/movie?api_key=1f7b1f9e89d450f52301bfae0a2217ef';
+    // const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
+    const url2 = `../movieapp/${setQuery}?api_key=1f7b1f9e89d450f52301bfae0a2217ef`;
     const url3 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
     
     //네이버 영화 api
@@ -44,8 +46,10 @@ export default function MovieSearchNInsert() {
         axios.get(url,{
             params:{query: moviecdNum,language: "ko"},
             headers: {
-                'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
-                'X-Naver-Client-Secret': 'SqBOobPA63',
+                // 'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
+                // 'X-Naver-Client-Secret': 'SqBOobPA63',
+                'X-Naver-Client-Id': 'yqQoYOiFtfGWO2oUVZKq',
+                'X-Naver-Client-Secret': 'ZogYdw7PQa',
                 'Accept': '*/*',
                 'Access-Control-Allow-Origin':'*',
                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
@@ -78,10 +82,13 @@ export default function MovieSearchNInsert() {
         //     setStatus(false);
         //   });
     }
+
+    // 영화진흥위원회
     useEffect(()=>{
         axios.get(url3,{
             params:{
-                key: '0d28095f9f31dd96948bdf3a57f427d1',
+                // key: '0d28095f9f31dd96948bdf3a57f427d1',
+                key: '218cd2fb84f26322ef3478c3d647564e',
                 movieNm : moviecdNum
             }
         }).then(res => setOtherQuery(res.data.movieListResult.movieList[0].movieCd)
@@ -93,7 +100,8 @@ export default function MovieSearchNInsert() {
         const url4 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
         axios.get(url4,{
             params:{
-                key: '0d28095f9f31dd96948bdf3a57f427d1',
+                // key: '0d28095f9f31dd96948bdf3a57f427d1',
+                key: '218cd2fb84f26322ef3478c3d647564e',
                 movieCd : otherQuery
             }
         }).then(res => setOtherData(res.data.movieInfoResult.movieInfo)
