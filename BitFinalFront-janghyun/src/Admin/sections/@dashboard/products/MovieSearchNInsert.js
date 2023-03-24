@@ -95,12 +95,17 @@ export default function MovieSearchNInsert() {
         },
     })
     .then((res) => {
-            if (res.data.results.length > 0) {
+            // if (res.data.results.length > 0) {
+            //     setSetQuery(res.data.results[0].id)
+            // }
+            // else {
+            //     alert("다시검색")
+            // }
+            if (res.data.results && res.data.results.length > 0) {
                 setSetQuery(res.data.results[0].id)
-            }
-            else {
-                alert("다시검색")
-            }
+              } else {
+                alert("다시 검색")
+              }
         }
     )},[movieSearchData])
 
