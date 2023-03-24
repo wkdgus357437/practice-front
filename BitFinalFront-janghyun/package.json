@@ -72,7 +72,6 @@
     "prettier": "^2.7.1"
   },
   "proxy": "https://jjh.herokuapp.com",
-  "homepage":".",
   "scripts": {
     "start": "react-scripts start",
     "build": "CI= react-scripts build",
