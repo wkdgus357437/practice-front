@@ -145,6 +145,7 @@ export default function MovieSearchNInsert() {
         movie_already_release:""
 
     });
+
     const insertMovie = () => {
 
         // 날짜 형식 변환
@@ -155,10 +156,10 @@ export default function MovieSearchNInsert() {
             .replace('<b>','').replace('</b>','').replace('<b>','').replace('</b>','').replace('<b>','').replace('</b>','')
             .replace('<b>','').replace('</b>','');
         const movie_subtitle = movieSearchData[0].subtitle;
-        // const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
-        // const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
-        const movie_poster_url = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + apiData.poster_path;
-        const movie_header_url = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + apiData.backdrop_path;
+        const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
+        const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
+        // const movie_poster_url = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + apiData.poster_path;
+        // const movie_header_url = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + apiData.backdrop_path;
 
         const movie_already_released = (apiData.status === "Realeased" ? 0 : 1);
         let reld = new Date(apiData.release_date);

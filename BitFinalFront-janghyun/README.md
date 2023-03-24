@@ -9,7 +9,8 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [https://jjh.herokuapp.com](https://jjh.herokuapp.com) to view it in your browser.
+<!-- Open [https://jjh.herokuapp.com](https://jjh.herokuapp.com) to view it in your browser. -->
+Open [https://janghyun-bitbox-project.netlify.app](https://janghyun-bitbox-project.netlify.app) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
