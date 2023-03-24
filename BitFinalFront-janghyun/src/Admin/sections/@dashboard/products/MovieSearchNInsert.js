@@ -32,8 +32,8 @@ export default function MovieSearchNInsert() {
     const url = '../movieapi/v1/search/movie.json';
     // const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
     // const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
-    const url1 = 'https://api.themoviedb.org/3/moviesearch/movie?api_key=1f7b1f9e89d450f52301bfae0a2217ef';
-    const url2 = `https://api.themoviedb.org/3/movieapp/${setQuery}?api_key=1f7b1f9e89d450f52301bfae0a2217ef`;
+    const url1 = 'https://image.themoviedb.org/3/moviesearch/movie?api_key=1f7b1f9e89d450f52301bfae0a2217ef';
+    const url2 = `https://image.themoviedb.org/3//movieapp/${setQuery}?api_key=1f7b1f9e89d450f52301bfae0a2217ef`;
     const url3 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
     //네이버 영화 api
     const onSearch = () =>{
@@ -162,8 +162,8 @@ export default function MovieSearchNInsert() {
         const movie_subtitle = movieSearchData[0].subtitle;
         // const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
         // const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
-        const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
-        const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
+        const movie_poster_url = 'https://image.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
+        const movie_header_url = 'https://image.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
         const movie_already_released = (apiData.status === "Realeased" ? 0 : 1);
         let reld = new Date(apiData.release_date);
         let reld2 = dateCalculator(reld,+31);
