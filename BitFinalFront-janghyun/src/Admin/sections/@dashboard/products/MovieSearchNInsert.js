@@ -160,8 +160,10 @@ export default function MovieSearchNInsert() {
             .replace('<b>','').replace('</b>','').replace('<b>','').replace('</b>','').replace('<b>','').replace('</b>','')
             .replace('<b>','').replace('</b>','');
         const movie_subtitle = movieSearchData[0].subtitle;
-        const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
-        const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
+        // const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
+        // const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
+        const movie_poster_url = 'https://image.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
+        const movie_header_url = 'https://image.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
         const movie_already_released = (apiData.status === "Realeased" ? 0 : 1);
         let reld = new Date(apiData.release_date);
         let reld2 = dateCalculator(reld,+31);
@@ -248,7 +250,8 @@ String movie_info_point = 영화소개에 들어갈그래프의 일종.  데이�
                     }
                 >
                 </Label>
-                <StyledProductImg alt={name} src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2`+apiData.poster_path} sx={{
+                {/* <StyledProductImg alt={name} src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2`+apiData.poster_path} sx={{ */}
+                <StyledProductImg alt={name} src={`https://image.themoviedb.org/t/p/w600_and_h900_bestv2`+apiData.poster_path} sx={{
                     display: 'inline-block',
                     width: '100%',
                     height: '500px',
