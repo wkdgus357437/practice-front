@@ -32,7 +32,8 @@ export default function MovieSearchNInsert() {
     const url1 = '../moviesearch/movie?api_key=1f7b1f9e89d450f52301bfae0a2217ef';
     // const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
     const url2 = `../movieapp/${setQuery}?api_key=1f7b1f9e89d450f52301bfae0a2217ef`;
-    const url3 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
+    // const url3 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
+    const url3 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
     
     //네이버 영화 api
     const onSearch = () =>{
@@ -97,7 +98,8 @@ export default function MovieSearchNInsert() {
 
 
     useEffect(()=>{
-        const url4 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
+        // const url4 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
+        const url4 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
         axios.get(url4,{
             params:{
                 // key: '0d28095f9f31dd96948bdf3a57f427d1',
