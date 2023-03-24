@@ -8,6 +8,8 @@ import { fCurrency } from '../../../utils/formatNumber';
 import Label from '../../../components/label';
 import {useEffect, useState} from "react";
 import axios from "axios";
+// import Button from 'src/Admin/theme/overrides/Button.ts';
+
 // ----------------------------------------------------------------------
 
 const StyledProductImg = styled('img')({
@@ -27,28 +29,10 @@ export default function MovieSearchNInsert() {
     const[apiData,setApiData] = useState([])
     const[otherQuery,setOtherQuery] = useState('')
     const[otherData,setOtherData] = useState([]);
-    // const url = '../movieapi/v1/search/movie.json';
-    const url = 'https://jjhherukuapp.com/movieapi/v1/search/movie.json';
-    // const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
-    const url1 = 'https://api.themoviedb.org/3/movie/550?api_key=1f7b1f9e89d450f52301bfae0a2217ef';
-    // const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
-    const url2 = `https://api.themoviedb.org/3/movie/${setQuery}?api_key=1f7b1f9e89d450f52301bfae0a2217ef`;
-    // const url3 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
-    const url3 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
-    
-
-
-    // const apiClient = axios.create({
-    //     baseURL: 'http://localhost:3000/movieapi', // API 서버의 기본 URL
-    //     headers: {
-    //       'X-Naver-Client-Id': 'yqQoYOiFtfGWO2oUVZKq',
-    //       'X-Naver-Client-Secret': 'ZogYdw7PQa',
-    //       'Accept': '*/*',
-    //       'Access-Control-Allow-Origin': '*',
-    //       'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-    //     },
-    //   });
-    
+    const url = '../movieapi/v1/search/movie.json';
+    const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
+    const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
+    const url3 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
     //네이버 영화 api
     const onSearch = () =>{
 
@@ -57,51 +41,25 @@ export default function MovieSearchNInsert() {
             alert("검색어를 입력해주세요.");
             return;
           }
-// ----------------------------------------------------------
-// apiClient.get('/v1/search/movie.json', {
-//     params: {
-//       query: moviecdNum, // 검색어
-//       display: 10, // 출력할 결과 수 (최대 10개)
-//       // ...
-//     }
-//   })
-//   .then(res => {
-//     if (res.data.items === undefined) {
-//       alert('데이터 없음');
-//       setStatus(false);
-//     } else {
-//       setMovieSearchData(res.data.items);
-//       setStatus(true);
-//     }
-//   });
-
-// --------------------------------------------------------
 
         axios.get(url,{
             params:{query: moviecdNum,language: "ko"},
             headers: {
-                // 'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
-                // 'X-Naver-Client-Secret': 'SqBOobPA63',
-                'X-Naver-Client-Id': 'yqQoYOiFtfGWO2oUVZKq',
-                'X-Naver-Client-Secret': 'ZogYdw7PQa',
-                
+                'X-Naver-Client-Id': '_g6JfZzkITAmkjoExZi8',
+                'X-Naver-Client-Secret': 'SqBOobPA63',
                 'Accept': '*/*',
                 'Access-Control-Allow-Origin':'*',
                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
             },
          }).then(res => res.data.items.length === 0 ? alert("데이터 없음")|| setStatus(false)
                                                     : setMovieSearchData(res.data.items)||setStatus(true)
-                );
+                )
 
-       
     }
-
-    // 영화진흥위원회
     useEffect(()=>{
         axios.get(url3,{
             params:{
-                // key: '0d28095f9f31dd96948bdf3a57f427d1',
-                key: '218cd2fb84f26322ef3478c3d647564e',
+                key: '0d28095f9f31dd96948bdf3a57f427d1',
                 movieNm : moviecdNum
             }
         }).then(res => setOtherQuery(res.data.movieListResult.movieList[0].movieCd)
@@ -110,12 +68,10 @@ export default function MovieSearchNInsert() {
 
 
     useEffect(()=>{
-        // const url4 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
-        const url4 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
+        const url4 = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
         axios.get(url4,{
             params:{
-                // key: '0d28095f9f31dd96948bdf3a57f427d1',
-                key: '218cd2fb84f26322ef3478c3d647564e',
+                key: '0d28095f9f31dd96948bdf3a57f427d1',
                 movieCd : otherQuery
             }
         }).then(res => setOtherData(res.data.movieInfoResult.movieInfo)
@@ -221,7 +177,7 @@ export default function MovieSearchNInsert() {
                 ];  
 
         // 영화 추가
-         axios.post('https://jjh.herokuapp.com/movielist/write',null,{
+         axios.post('http://localhost:8080/movielist/write',null,{
             params:{
               movie_title, movie_subtitle, movie_poster_url, movie_header_url, movie_already_released, movie_release_start,
               movie_release_end,movie_class,movie_agegrade,movie_score,movie_info_title,movie_info_title2,movie_info_type
