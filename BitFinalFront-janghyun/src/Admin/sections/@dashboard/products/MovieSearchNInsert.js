@@ -95,17 +95,13 @@ export default function MovieSearchNInsert() {
         },
     })
     .then((res) => {
-            // if (res.data.results.length > 0) {
-            //     setSetQuery(res.data.results[0].id)
-            // }
-            // else {
-            //     alert("다시검색")
-            // }
-            if (res.data.results && res.data.results.length > 0) {
+            if (res.data.results.length > 0) {
                 setSetQuery(res.data.results[0].id)
-              } else {
-                alert("다시 검색")
-              }
+            }
+            else {
+                alert("다시검색")
+            }
+           
         }
     )},[movieSearchData])
 
@@ -159,8 +155,11 @@ export default function MovieSearchNInsert() {
             .replace('<b>','').replace('</b>','').replace('<b>','').replace('</b>','').replace('<b>','').replace('</b>','')
             .replace('<b>','').replace('</b>','');
         const movie_subtitle = movieSearchData[0].subtitle;
-        const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
-        const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
+        // const movie_poster_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.poster_path;
+        // const movie_header_url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'+apiData.backdrop_path;
+        const movie_poster_url = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + apiData.poster_path;
+        const movie_header_url = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + apiData.backdrop_path;
+
         const movie_already_released = (apiData.status === "Realeased" ? 0 : 1);
         let reld = new Date(apiData.release_date);
         let reld2 = dateCalculator(reld,+31);
