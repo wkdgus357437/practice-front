@@ -87,6 +87,22 @@ export default function MovieSearchNInsert() {
         if (moviecdNum === "") {
             return;
           }
+
+          async function getData() {
+  try {
+    const response1 = await fetch('url1');
+    const data1 = await response1.json();
+    const response2 = await fetch('url2/' + data1.id);
+    if (response2.ok) {
+      const data2 = await response2.json();
+      console.log(data2);
+    } else {
+      throw new Error('Failed to fetch data from url2');
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
     axios.get(url1, {
         params: {query: moviecdNum,language: "ko"},
         headers: {
