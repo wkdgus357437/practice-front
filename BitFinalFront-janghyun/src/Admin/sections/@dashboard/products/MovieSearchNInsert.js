@@ -30,8 +30,10 @@ export default function MovieSearchNInsert() {
     const[otherQuery,setOtherQuery] = useState('')
     const[otherData,setOtherData] = useState([]);
     const url = '../movieapi/v1/search/movie.json';
-    const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
-    const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
+    // const url1 = '../moviesearch/movie?api_key=574ef45c366822b07b3a7f5799a6b116';
+    // const url2 = `../movieapp/${setQuery}?api_key=574ef45c366822b07b3a7f5799a6b116`;
+    const url1 = '../moviesearch/movie?api_key=1f7b1f9e89d450f52301bfae0a2217ef';
+    const url2 = `../movieapp/${setQuery}?api_key=1f7b1f9e89d450f52301bfae0a2217ef`;
     const url3 = 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json';
     //네이버 영화 api
     const onSearch = () =>{
